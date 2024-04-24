@@ -10,6 +10,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style_normalize.css">
 
@@ -144,9 +149,14 @@
             <!-- First Form Column -->
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
-                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
-                        <label for="dob" class="form-label">Date of Birth :</label>
-                        <input type="text" class="form-control" id="dob" placeholder="Type DOB here">
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="datepicker" class="form-label">Date of Birth :</label>
+                        <div class="input-group date">
+                            <input type="text" class="form-control" id="datepicker" placeholder="Type DOB here">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -207,7 +217,7 @@
                     </div>
 
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="date" class="form-label">Recent purchase date and time :</label>
+                        <label for="date" class="form-label">Recent purchase Date :</label>
                         <input type="text" class="form-control" id="date" placeholder="Date Here">
                     </div>
 
@@ -222,7 +232,7 @@
                     </div>
 
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="time" class="form-label">Recent purchase date and time :</label>
+                        <label for="time" class="form-label">Recent purchase Time :</label>
                         <input type="text" class="form-control" id="time" placeholder="Time Here">
                     </div>
                 </form>
@@ -268,5 +278,23 @@
 
 <script src="lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script src="js/home.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Initialize datepicker
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd', // Date format
+            autoclose: true, // Close the datepicker when a date is selected
+            todayHighlight: true // Highlight today's date
+        });
+    });
+</script>
 </body>
 </html>
