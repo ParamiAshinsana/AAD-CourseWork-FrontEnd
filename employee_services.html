@@ -84,7 +84,7 @@
 </section>
 
 <section id="employee-services">
-    <h2>Customer Service</h2>
+    <h2>Employee Service</h2>
     <div class="container">
         <div class="row">
             <!-- First Form Column -->
@@ -111,7 +111,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="profile_picture" class="form-label">Profile Picture:</label>
+                    <label for="profile_picture" class="form-label">Profile Picture :</label>
                     <div class="input-group">
                         <input type="file" class="form-control" id="profile_picture">
                         <label class="input-group-text" for="profile_picture"><i class="bi bi-file-image"></i></label> <!-- You can use any icon library here -->
@@ -143,26 +143,69 @@
         </div>
 
         <div class="row">
+            <div class="col-md-4">
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="employee_status" class="form-label">Status :</label>
+                    <input type="text" class="form-control" id="employee_status" placeholder="Civil status of each employee">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="employee_designation" class="form-label">Designation :</label>
+                    <input type="text" class="form-control" id="employee_designation" placeholder="Designation of the employee">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="access_role" class="form-label">Access Role</label>
+                    <select class="form-select" id="access_role">
+                        <option value="admin">ADMIN</option>
+                        <option value="user">USER</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <!-- First Form Column -->
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
-                        <label for="dob" class="form-label">Date of Birth :</label>
-                        <input type="text" class="form-control" id="dob" placeholder="Type DOB here">
+                        <label for="join_dob" class="form-label">Date of Join :</label>
+                        <input type="text" class="form-control" id="join_dob" placeholder="Join Date here">
                     </div>
                 </form>
             </div>
             <!-- Second Form Column -->
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
-                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="gender" class="form-label">Gender</label>
-                        <!--                        <input type="text" class="form-control" id="gender" placeholder="The gender of the customer">-->
-                        <select class="form-select" id="gender">
-                            <!--                        <option selected>Select the Level...</option>-->
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                        </select>
+                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                        <label for="emp_branch" class="form-label">Attached Branch :</label>
+                        <input type="text" class="form-control" id="emp_branch" placeholder="Join Date here">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- First Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                        <label for="emp_ad01" class="form-label">Address 01 :</label>
+                        <input type="text" class="form-control" id="emp_ad01" placeholder="Preferred their building no or name">
+                    </div>
+                </form>
+            </div>
+            <!-- Second Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                        <label for="emp_ad02" class="form-label">Address 02 :</label>
+                        <input type="text" class="form-control" id="emp_ad02" placeholder="Preferred their lane">
                     </div>
                 </form>
             </div>
@@ -172,29 +215,22 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="loyaldate" class="form-label">Join date as a loyalty customer :</label>
-                    <input type="text" class="form-control" id="loyaldate" placeholder="Date of the entitlement as a loyalty customer">
+                    <label for="emp_ad03" class="form-label">Address 03 :</label>
+                    <input type="text" class="form-control" id="emp_ad03" placeholder="Included their main city">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="loyalty_level" class="form-label">Level :</label>
-                    <!--                    <input type="text" class="form-control" id="loyalty_level" placeholder="Gold, Silver, Bronze, New">-->
-                    <select class="form-select" id="loyalty_level">
-                        <!--                        <option selected>Select the Level...</option>-->
-                        <option value="gold">Gold</option>
-                        <option value="silver">Silver</option>
-                        <option value="bronze">Bronze</option>
-                        <option value="new">New</option>
-                    </select>
+                    <label for="emp_ad04" class="form-label">Address 04 :</label>
+                    <input type="text" class="form-control" id="emp_ad04" placeholder="Included their main state">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="total_points" class="form-label">Total Points :</label>
-                    <input type="text" class="form-control" id="total_points" placeholder="Add 1 point purchase more than LKR 800">
+                    <label for="emp_ad05" class="form-label">Address 05 :</label>
+                    <input type="text" class="form-control" id="emp_ad05" placeholder="Included their postal code">
                 </div>
             </div>
         </div>
@@ -204,13 +240,13 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="contact" class="form-label">Contact :</label>
-                        <input type="text" class="form-control" id="contact" placeholder="Mobile number to contact">
+                        <label for="emp_contact" class="form-label">Employee Contact :</label>
+                        <input type="text" class="form-control" id="emp_contact" placeholder="Type Employee Contact here">
                     </div>
 
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="date" class="form-label">Recent purchase date and time :</label>
-                        <input type="text" class="form-control" id="date" placeholder="Date Here">
+                        <label for="emp_guardian" class="form-label">Inform in case of emergency :</label>
+                        <input type="text" class="form-control" id="emp_guardian" placeholder="Name the guardian or nominated person">
                     </div>
 
                 </form>
@@ -219,21 +255,23 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="customer_email" class="form-label">Email :</label>
-                        <input type="email" class="form-control" id="customer_email" placeholder="Type Cashier Name here">
+                        <label for="emp_email" class="form-label">Employee Email :</label>
+                        <input type="text" class="form-control" id="emp_email" placeholder="Type Employee Email here">
                     </div>
 
+
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="time" class="form-label">Recent purchase date and time :</label>
-                        <input type="text" class="form-control" id="time" placeholder="Time Here">
+                        <label for="emp_emergency_contact" class="form-label">Emergency Contact :</label>
+                        <input type="text" class="form-control" id="emp_emergency_contact" placeholder="Type Contact details here">
                     </div>
                 </form>
             </div>
 
         </div>
 
+
         <div class="row">
-            <div class="mt-5 m-5" id="customer-btns">
+            <div class="mt-5 m-5" id="employee-btns">
                 <button type="button" class="btn btn-outline-success">Register</button>
                 <button type="button" class="btn btn-outline-primary">Update</button>
                 <button type="button" class="btn btn-outline-danger">Delete</button>
@@ -260,7 +298,7 @@
                         <th scope="col">Recent Time</th>
                     </tr>
                     </thead>
-                    <tbody id="customer-tbl-body"></tbody>
+                    <tbody id="employee-tbl-body"></tbody>
                 </table>
 
             </div>
