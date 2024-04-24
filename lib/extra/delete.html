@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../css/home.css">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    .navigation-section{
+      width: 100%;
+      height: 100vh;
+      background-image: url("../../img/ShoesBackground.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .navigation-section nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0 0 rgba(0,0,0,0.6);
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border: 2px solid #d63384;
+    }
+    .navigation-section nav .logo{
+      width: 50vw;
+      height: 50vh;
+      cursor: pointer;
+      position: relative;
+      margin: 5px 0;
+      left: -4%;
+    }
+    .navigation-section nav ul{
+      list-style: none;
+    }
+    .navigation-section nav ul li{
+      display: inline-block;
+      margin: 5px 15px;
+    }
+    .navigation-section nav ul li a{
+      text-decoration: none;
+      color: #9e8f80;
+      transition: 0.2s;
+    }
+    .navigation-section nav ul li a:hover{
+      color: #fc670a;
+    }
+    .navigation-section .main .main_content{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .navigation-section .main .main_content .main_text h1{
+      font-size: 90px;
+      line-height: 70px;
+      font-family: "pyxidium quick";
+      background: linear-gradient(to right,#fc670a,#9e8f80);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      top: 45px;
+      left: 5%;
+    }
+    .navigation-section .main .main_content .main_text h1 span{
+      font-size: 70px;
+      background: linear-gradient(to right,#fc670a,#9e8f80);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .navigation-section .main .main_content .main_text p{
+      width: 600px;
+      text-align: justify;
+      line-height: 21px;
+      position: relative;
+      top: 85px;
+      left: 5%;
+
+    }
+
+  </style>
+</head>
+<body>
+<section class="navigation-section">
+<!--  <nav>-->
+<!--    <div class="logo">-->
+<!--      &lt;!&ndash;       <img src="img/HelloShoeLogo.png" class="logo">&ndash;&gt;-->
+<!--    </div>-->
+<!--    <ul>-->
+<!--      <li><a href="#Home">HOME</a></li>-->
+<!--      <li><a href="#Sale">SALES</a></li>-->
+<!--      <li><a href="#Customer">CUSTOMERS</a></li>-->
+<!--      <li><a href="#Emp">EMP</a></li>-->
+<!--      <li><a href="#Supp">SUPP</a></li>-->
+<!--      <li><a href="#Inven">INVEN</a></li>-->
+<!--      <li><a href="#Control">CONTROL</a></li>-->
+<!--    </ul>-->
+
+<!--    <div class="icons">-->
+<!--      <i class="fa-solid fa-heart" style="color: #9e8f80;"></i>-->
+<!--      <i class="fa-solid fa-cart-shopping" style="color: #9e8f80;"></i>-->
+<!--      <i class="fa-solid fa-user" style="color: #9e8f80;"></i>-->
+<!--    </div>-->
+<!--  </nav>-->
+
+  <div class="main" id="Home">
+    <div class="main_content">
+      <div class="main_text">
+        <h1>NIKE<br><span>Collection</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam architecto
+          consequuntur doloremque fuga in iusto laborum libero magni molestias, officia possimus
+          qui quia quibusdam quos, rerum sapiente similique sit.
+        </p>
+      </div>
+      <div class="main_image">
+        <!--        <img src="img/ShoesBackground.png">-->
+      </div>
+    </div>
+    <div class="sales_tabs">
+      <a href="#Sale">Sale Services</a>
+      <i class="fa-solid fa-chevron-right" style="color: #9e8f80;"></i>
+    </div>
+  </div>
+</section>
+</body>
+</html>

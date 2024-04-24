@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+  <style>
+    /* Custom CSS for changing Bootstrap form field colors */
+    .form-control:focus,
+    .form-control:hover {
+      background-color: #f0e6e1 !important;
+    }
+  </style>
+</head>
+<body>
+<section id="sale-services">
+  <h2>Sale Service</h2>
+  <div class="container">
+    <div class="row">
+      <!-- First Form Column -->
+      <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <form>
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="order_no" class="form-label">Order No :</label>
+            <input type="text" disabled class="form-control" id="order_no" placeholder="Type Order No here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="item_code" class="form-label">Item Code :</label>
+            <input type="text" class="form-control" id="item_code" placeholder="Type Item Code here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="item_price" class="form-label">Item Price :</label>
+            <input type="text" class="form-control" id="item_price" placeholder="Type Item Price here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="item_qty" class="form-label">Item Quantity :</label>
+            <input type="text" class="form-control" id="item_qty" placeholder="Type Item Quantity here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="pr_date" class="form-label">Purchase date :</label>
+            <input type="text" class="form-control" id="pr_date">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="points" class="form-label">Added points :</label>
+            <input type="text" class="form-control" id="points" placeholder="Points of Loyalty customers here">
+          </div>
+
+        </form>
+      </div>
+      <!-- Second Form Column -->
+      <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <form>
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="customer_name" class="form-label">Customer Name :</label>
+            <input type="text" class="form-control" id="customer_name" placeholder="Type Customer Name here">
+          </div>
+
+          <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+            <label for="item_des" class="form-label">Item Description :</label>
+            <input type="text" class="form-control" id="item_des" placeholder="Type Item Description here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="shoe_size" class="form-label">Shoes Size</label>
+            <input type="text" class="form-control" id="shoe_size" placeholder="Size of a shoe">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="total_price" class="form-label">Total Price :</label>
+            <input type="text" class="form-control" id="total_price" placeholder="Type Item Price here">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="payment_method" class="form-label">Payment method :</label>
+            <input type="text" class="form-control" id="payment_method" placeholder="Cash or Cards">
+          </div>
+
+          <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+            <label for="cashier_name" class="form-label">Cashier name :</label>
+            <input type="text" class="form-control" id="cashier_name" placeholder="Type Cashier Name here">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="../bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="../lib/jquery.min.js"></script>
+</body>
+</html>

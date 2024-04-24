@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Services</title>
+    <link rel="stylesheet" href="css/sale_service.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        #employee-services{
+            margin-top: 120px;
+        }
+    </style>
+</head>
+<body>
+<section class="navigation-section">
+    <nav class="nav container">
+        <a href="#" class="navLogo">
+            <img src="img/qwe.png" class="logo img-fluid" width="110px" height="100px">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="home.html" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="sale_services.html" class="nav__link">Sale Services</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="customer_services.html" class="nav__link">Customers</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="employee_services.html" class="nav__link">Employees</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="supplier_services.html" class="nav__link">Suppliers</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="inventory.html" class="nav__link">Inventory</a>
+                </li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__actions">
+
+            <!-- Login button -->
+            <i class="ri-user-line nav__login" id="login-btn"></i>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section id="employee-services">
+    <h2>Customer Service</h2>
+    <div class="container">
+        <div class="row">
+            <!-- First Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="customer_code" class="form-label">Customer Code :</label>
+                        <input type="text" disabled class="form-control" id="customer_code">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="ad_01" class="form-label">Address Line 01 :</label>
+                        <input type="text" class="form-control" id="ad_01" placeholder="Preferred their building no or name">
+                    </div>
+                </form>
+            </div>
+            <!-- Second Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="customer_name" class="form-label">Customer Name :</label>
+                        <input type="text" class="form-control" id="customer_name" placeholder="Type Customer Name here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="ad_02" class="form-label">Address Line 02  :</label>
+                        <input type="text" class="form-control" id="ad_02" placeholder="Preferred their lane">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="ad_01" class="form-label">Address Line 03 :</label>
+                    <input type="text" class="form-control" id="ad_03" placeholder="Included their main city">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="ad_04" class="form-label">Address Line 04 :</label>
+                    <input type="text" class="form-control" id="ad_04" placeholder="Included their main state">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="ad_05" class="form-label">Address Line 05 :</label>
+                    <input type="text" class="form-control" id="ad_05" placeholder="Included their postal code">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                        <label for="dob" class="form-label">Date of Birth :</label>
+                        <input type="text" class="form-control" id="dob" placeholder="Type DOB here">
+                    </div>
+                </form>
+            </div>
+            <!-- Second Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="gender" class="form-label">Gender</label>
+                        <!--                        <input type="text" class="form-control" id="gender" placeholder="The gender of the customer">-->
+                        <select class="form-select" id="gender">
+                            <!--                        <option selected>Select the Level...</option>-->
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="loyaldate" class="form-label">Join date as a loyalty customer :</label>
+                    <input type="text" class="form-control" id="loyaldate" placeholder="Date of the entitlement as a loyalty customer">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="loyalty_level" class="form-label">Level :</label>
+                    <!--                    <input type="text" class="form-control" id="loyalty_level" placeholder="Gold, Silver, Bronze, New">-->
+                    <select class="form-select" id="loyalty_level">
+                        <!--                        <option selected>Select the Level...</option>-->
+                        <option value="gold">Gold</option>
+                        <option value="silver">Silver</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="new">New</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="total_points" class="form-label">Total Points :</label>
+                    <input type="text" class="form-control" id="total_points" placeholder="Add 1 point purchase more than LKR 800">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="contact" class="form-label">Contact :</label>
+                        <input type="text" class="form-control" id="contact" placeholder="Mobile number to contact">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="date" class="form-label">Recent purchase date and time :</label>
+                        <input type="text" class="form-control" id="date" placeholder="Date Here">
+                    </div>
+
+                </form>
+            </div>
+            <!-- Second Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="customer_email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="customer_email" placeholder="Type Cashier Name here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="time" class="form-label">Recent purchase date and time :</label>
+                        <input type="text" class="form-control" id="time" placeholder="Time Here">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="mt-5 m-5" id="customer-btns">
+                <button type="button" class="btn btn-outline-success">Register</button>
+                <button type="button" class="btn btn-outline-primary">Update</button>
+                <button type="button" class="btn btn-outline-danger">Delete</button>
+                <button type="reset" class="btn btn-outline-warning">Reset</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">Customer Code</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Join Date</th>
+                        <th scope="col">Total Loyalty Point</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Recent Date</th>
+                        <th scope="col">Recent Time</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customer-tbl-body"></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

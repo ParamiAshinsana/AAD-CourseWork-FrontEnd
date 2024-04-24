@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Title</title>
+  <!--=============== LINKS ===============-->
+  <link rel="stylesheet" href="../bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+  <!--=============== CSS ===============-->
+<!--  <link rel="stylesheet" href="css/home.css">-->
+
+  <!--=============== REMIX ICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+  <style>
+    /*=============== GOOGLE FONTS ===============*/
+    @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+    /*=============== VARIABLES CSS ===============*/
+    :root {
+      --header-height: 3.5rem;
+
+      /*========== Colors ==========*/
+      --first-color: hsl(230, 75%, 56%);
+      --title-color: hsl(230, 75%, 15%);
+      --text-color: hsl(230, 12%, 40%);
+      --body-color: hsl(230, 100%, 98%);
+      --container-color: hsl(230, 100%, 97%);
+      --border-color: hsl(230, 25%, 80%);
+
+      /*========== Font and typography ==========*/
+      --body-font: "Syne", sans-serif;
+      --h2-font-size: 1.25rem;
+      --normal-font-size: .938rem;
+
+      /*========== Font weight ==========*/
+      --font-regular: 400;
+      --font-medium: 500;
+      --font-semi-bold: 600;
+
+      /*========== z index ==========*/
+      --z-fixed: 100;
+      --z-modal: 1000;
+    }
+
+    /*========== Responsive typography ==========*/
+    @media screen and (min-width: 1023px) {
+      :root {
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 1rem;
+      }
+    }
+
+    /*=============== BASE ===============*/
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body,
+    input,
+    button {
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+    }
+
+    body {
+      background-color: var(--body-color);
+      color: var(--text-color);
+    }
+
+    input,
+    button {
+      border: none;
+      outline: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /*=============== REUSABLE CSS CLASSES ===============*/
+    .container {
+      max-width: 1120px;
+      margin-inline: 1.5rem;
+    }
+
+    .main {
+      position: relative;
+      height: 100vh;
+    }
+
+    .main__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+
+    /*=============== HEADER & NAV ===============*/
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--body-color);
+      box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+      z-index: var(--z-fixed);
+    }
+
+    .nav {
+      height: var(--header-height);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__logo {
+      font-weight: var(--font-semi-bold);
+      transition: color .4s;
+      border: 1px solid green;
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+
+    .nav__search,
+    .nav__login,
+    .nav__toggle,
+    .nav__close {
+      font-size: 1.25rem;
+      color: var(--title-color);
+      cursor: pointer;
+      transition: color .4s;
+    }
+
+    :is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
+      color: #fc670a ;
+    }
+
+    /* Navigation for mobile devices */
+    @media screen and (max-width: 1023px) {
+      .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: var(--body-color);
+        box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+        width: 100%;
+        padding-block: 4.5rem 4rem;
+        transition: top .4s;
+      }
+    }
+
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+      text-align: center;
+    }
+
+    .nav__link {
+      color: #9e8f80;
+      font-weight: var(--font-semi-bold);
+      transition: color .4s;
+    }
+
+    .nav__close {
+      position: absolute;
+      top: 1.15rem;
+      right: 1.5rem;
+    }
+
+    /* Show menu */
+    .show-menu {
+      top: 0;
+    }
+
+    /*=============== SEARCH ===============*/
+
+    .show-search .search__form {
+      transform: translateY(0);
+    }
+
+    .login__signup a {
+      color: var(--first-color);
+    }
+
+    .show-login .login__form {
+      transform: translateY(0);
+    }
+
+    /*=============== BREAKPOINTS ===============*/
+
+    /* For large devices */
+    @media screen and (min-width: 1023px) {
+      .nav {
+        height: calc(var(--header-height) + 2rem);
+        column-gap: 3rem;
+      }
+      .nav__close,
+      .nav__toggle {
+        display: none;
+      }
+      .nav__menu {
+        margin-left: auto;
+      }
+      .nav__list {
+        flex-direction: row;
+        column-gap: 3rem;
+      }
+    }
+
+    @media screen and (min-width: 1150px) {
+      .container {
+        margin-inline: auto;
+      }
+    }
+
+    /*///////////////////////////////////////////////*/
+
+    /*.main .main_content{*/
+    /*  display: flex;*/
+    /*  align-items: center;*/
+    /*  justify-content: space-around;*/
+    /*  border: 2px solid blue;*/
+    /*}*/
+    /*.main .main_content .main_text hi{*/
+    /*  font-size: 90px;*/
+    /*  line-height: 70px;*/
+    /*  font-family: "Calibri Light";*/
+    /*  background: linear-gradient(to right,#fc670a,#9e8f80);*/
+    /*  -webkit-background-clip: text;*/
+    /*  -webkit-text-fill-color: transparent;*/
+    /*  position: relative;*/
+    /*  top: 45px;*/
+    /*  left: 5%;*/
+    /*}*/
+    /*.main .main_content .main_text hi span{*/
+    /*  font-size: 70px;*/
+    /*  background: linear-gradient(to right,#fc670a,#9e8f80);*/
+    /*  -webkit-background-clip: text;*/
+    /*  -webkit-text-fill-color: transparent;*/
+    /*}*/
+    /*.main .main_content .main_text p{*/
+    /*  width: 600px;*/
+    /*  text-align: justify;*/
+    /*  line-height: 21px;*/
+    /*  position: relative;*/
+    /*  top: 85px;*/
+    /*  left: 5%;*/
+    /*}*/
+    .home_section{
+      border: 10px solid red;
+    }
+    .main_content{
+      border: 5px solid greenyellow;
+    }
+    .main_text{
+      border: 5px solid deepskyblue;
+    }
+    .sales_tabs{
+      border: 5px solid coral;
+    }
+    .navigation-section{
+      border: 8px solid saddlebrown;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--body-color);
+      box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+      z-index: var(--z-fixed);
+    }
+    section{
+      padding-top: 70px;
+    }
+
+
+  </style>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<section class="navigation-section">
+<!--  <header class="header" id="header"></header>-->
+  <nav class="nav container">
+    <a href="#" class="nav__logo">
+      <img src="../../img/HelloShoeLogo.png" class="logo img-fluid" width="120px" height="120px">
+    </a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#Home" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#SaleService" class="nav__link">Sale Services</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#Customer" class="nav__link">Customers</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#Employee" class="nav__link">Employees</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#Supplier" class="nav__link">Suppliers</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#Inventory" class="nav__link">Inventory</a>
+        </li>
+      </ul>
+
+      <!-- Close button -->
+      <div class="nav__close" id="nav-close">
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <div class="nav__actions">
+
+      <!-- Login button -->
+      <i class="ri-user-line nav__login" id="login-btn"></i>
+
+      <!-- Toggle button -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </nav>
+</section>
+
+
+
+<!--==================== MAIN ====================-->
+<!--<section class="home_section">-->
+<!--  &lt;!&ndash;  <main class="main"></main>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <img src="img/ShoesBackground.png" alt="image" class="main__bg">&ndash;&gt;-->
+
+<!--  <div class="main_content">-->
+<!--    <div class="main_text">-->
+<!--      <h1>Hello<br><span>Shoes</span></h1>-->
+<!--      <p>-->
+<!--        Where every step begins a journey-->
+<!--      </p>-->
+<!--    </div>-->
+<!--    <div class="main_image">-->
+<!--      &lt;!&ndash;        <img src="img/ShoesBackground.png">&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="sales_tabs">-->
+<!--    <a href="#Sale">Sale Services</a>-->
+<!--    <i class="fa-solid fa-chevron-right" style="color: #9e8f80;"></i>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--=============== MAIN JS ===============-->
+<!--<script src="lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
+<script src="../../js/home.js"></script>
+<script src="../lib/jquery.min.js"></script>
+</body>
+</html>

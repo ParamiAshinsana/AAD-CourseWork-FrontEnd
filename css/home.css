@@ -1,0 +1,88 @@
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+
+@media screen and (min-width: 1023px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.home-section{
+  height: 1000px;
+  border: 5px solid #0dcaf0;
+}
+
+.main-section{
+  /*margin-top: 108px;*/
+  /*height: 585px;*/
+  width: 100%;
+  height: 100vh;
+  background-image: url("img/ShoesBackground.png");
+  background-size: cover;
+  background-position: center;
+}
+.main-section .main_content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 150px;
+  position: relative;
+  height: 540px;
+}
+.main-section .main_content .main_text h1{
+  font-size: 150px;
+  line-height: 90px;
+  font-family: "pyxidium quick";
+  background: linear-gradient(to right,#fc670a,#9e8f80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: -30px;
+  left: 1%;
+}
+.main-section .main_content .main_text h1 span{
+  font-size: 100px;
+  background: linear-gradient(to right,#fc670a,#9e8f80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-section .main_content .main_text p{
+  font-size: 35px;
+  /*width: 600px;*/
+  /*text-align: justify;*/
+  line-height: 81px;
+  /*position: absolute;*/
+  /*top: 200px;*/
+  /*left: 5%;*/
+  position: relative;
+  top: -130px;
+}
+.main-section .main_content .sales_tabs{
+  border: 2px solid #9e8f80;
+  width: 180px;
+  height: 50px ;
+  position: relative;
+  top: 160px;
+  left: -60vw;
+  border-radius: 25px;
+  align-content: center;
+  padding: 25px;
+  background: white ;
+}
+.main-section .main_content .sales_tabs a{
+  color: #9e8f80;
+}

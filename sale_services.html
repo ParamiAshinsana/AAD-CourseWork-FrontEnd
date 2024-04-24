@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sale Services</title>
+
+    <link rel="stylesheet" href="css/sale_service.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        .main-section{
+            background-image: url("img/ShoesBackground.png");
+        }
+        a {
+            text-decoration: none;
+        }
+        #sale-services{
+            margin-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+<section class="navigation-section">
+    <nav class="nav container">
+        <a href="#" class="navLogo">
+            <img src="img/qwe.png" class="logo img-fluid" width="110px" height="100px">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="home.html" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="sale_services.html" class="nav__link">Sale Services</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="customer_services.html" class="nav__link">Customers</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="employee_services.html" class="nav__link">Employees</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="supplier_services.html" class="nav__link">Suppliers</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="inventory.html" class="nav__link">Inventory</a>
+                </li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__actions">
+
+            <!-- Login button -->
+            <i class="ri-user-line nav__login" id="login-btn"></i>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section id="sale-services">
+    <h2>Sale Service</h2>
+    <div class="container">
+        <div class="row">
+            <!-- First Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="order_no" class="form-label">Order No :</label>
+                        <input type="text" disabled class="form-control" id="order_no" placeholder="Type Order No here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="item_code" class="form-label">Item Code :</label>
+                        <input type="text" class="form-control" id="item_code" placeholder="Type Item Code here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="item_price" class="form-label">Item Price :</label>
+                        <input type="text" class="form-control" id="item_price" placeholder="Type Item Price here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="item_qty" class="form-label">Item Quantity :</label>
+                        <input type="text" class="form-control" id="item_qty" placeholder="Type Item Quantity here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="pr_date" class="form-label">Purchase date :</label>
+                        <input type="text" class="form-control" id="pr_date">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="points" class="form-label">Added points :</label>
+                        <input type="text" class="form-control" id="points" placeholder="Points of Loyalty customers here">
+                    </div>
+
+                </form>
+            </div>
+            <!-- Second Form Column -->
+            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <form>
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="customer_name" class="form-label">Customer Name :</label>
+                        <input type="text" class="form-control" id="customer_name" placeholder="Type Customer Name here">
+                    </div>
+
+                    <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                        <label for="item_des" class="form-label">Item Description :</label>
+                        <input type="text" class="form-control" id="item_des" placeholder="Type Item Description here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="shoe_size" class="form-label">Shoes Size</label>
+                        <input type="text" class="form-control" id="shoe_size" placeholder="Size of a shoe">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="total_price" class="form-label">Total Price :</label>
+                        <input type="text" class="form-control" id="total_price" placeholder="Type Item Price here">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="payment_method" class="form-label">Payment method :</label>
+                        <input type="text" class="form-control" id="payment_method" placeholder="Cash or Cards">
+                    </div>
+
+                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                        <label for="cashier_name" class="form-label">Cashier name :</label>
+                        <input type="text" class="form-control" id="cashier_name" placeholder="Type Cashier Name here">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="mt-5 m-5" id="sale-btns">
+                <button type="button" class="btn btn-outline-success">Add</button>
+                <button type="button" class="btn btn-outline-primary">Update</button>
+                <button type="button" class="btn btn-outline-danger">Delete</button>
+                <button type="reset" class="btn btn-outline-warning">Reset</button>
+            </div>
+
+            <div class="col">
+
+                <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">Order No</th>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Item Quantity</th>
+                        <th scope="col">Total Price</th>
+                        <th scope="col">Purchase Date</th>
+                        <th scope="col">Payment Method</th>
+                        <th scope="col">Added Points</th>
+                        <th scope="col">Cashier Name</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="sale-tbl-body"></tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<script src="lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="js/home.js"></script>
+
+<script>
+    // Sample data (you can replace it with your actual data)
+    var data = [
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '001', itemCode: 'ABC123', customerName: 'John Doe', itemQuantity: 2, totalPrice: 50, purchaseDate: '2024-04-23', paymentMethod: 'Cash', addedPoints: 10, cashierName: 'Jane Smith' },
+        { orderNo: '002', itemCode: 'XYZ789', customerName: 'Jane Smith', itemQuantity: 1, totalPrice: 30, purchaseDate: '2024-04-24', paymentMethod: 'Credit Card', addedPoints: 5, cashierName: 'John Doe' }
+    ];
+
+    // Get a reference to the table body
+    var tableBody = document.getElementById('customer-tbl-body');
+
+    // Loop through the data and add rows to the table
+    data.forEach(function(item) {
+        var row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.orderNo}</td>
+            <td>${item.itemCode}</td>
+            <td>${item.customerName}</td>
+            <td>${item.itemQuantity}</td>
+            <td>${item.totalPrice}</td>
+            <td>${item.purchaseDate}</td>
+            <td>${item.paymentMethod}</td>
+            <td>${item.addedPoints}</td>
+            <td>${item.cashierName}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+</script>
+</body>
+</html>

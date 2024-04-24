@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sale Services</title>
+
+    <!--  <link rel="stylesheet" href="css/sale_service.css">-->
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="../bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        .main-section{
+            background-image: url("../../img/ShoesBackground.png");
+        }
+        a {
+            text-decoration: none;
+        }
+        #sale-services{
+            margin-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section id="sale-services">
+    <h2>Customer Service</h2>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker3'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+               <span class="glyphicon glyphicon-time"></span>
+               </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        format: 'LT'
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</section>
+
+<script src="../bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="../../js/home.js"></script>
+
+</body>
+</html>
