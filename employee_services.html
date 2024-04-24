@@ -10,6 +10,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style_normalize.css">
 
@@ -86,13 +91,8 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="customer_code" class="form-label">Customer Code :</label>
-                        <input type="text" disabled class="form-control" id="customer_code">
-                    </div>
-
-                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="ad_01" class="form-label">Address Line 01 :</label>
-                        <input type="text" class="form-control" id="ad_01" placeholder="Preferred their building no or name">
+                        <label for="employee_code" class="form-label">Employee Code :</label>
+                        <input type="text" disabled class="form-control" id="employee_code">
                     </div>
                 </form>
             </div>
@@ -100,13 +100,8 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="customer_name" class="form-label">Customer Name :</label>
-                        <input type="text" class="form-control" id="customer_name" placeholder="Type Customer Name here">
-                    </div>
-
-                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="ad_02" class="form-label">Address Line 02  :</label>
-                        <input type="text" class="form-control" id="ad_02" placeholder="Preferred their lane">
+                        <label for="employee_name" class="form-label">Employee Name :</label>
+                        <input type="text" class="form-control" id="employee_name" placeholder="Type Employee Name here">
                     </div>
                 </form>
             </div>
@@ -116,22 +111,33 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="ad_01" class="form-label">Address Line 03 :</label>
-                    <input type="text" class="form-control" id="ad_03" placeholder="Included their main city">
+                    <label for="profile_picture" class="form-label">Profile Picture:</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="profile_picture">
+                        <label class="input-group-text" for="profile_picture"><i class="bi bi-file-image"></i></label> <!-- You can use any icon library here -->
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="ad_04" class="form-label">Address Line 04 :</label>
-                    <input type="text" class="form-control" id="ad_04" placeholder="Included their main state">
+                    <label for="datepicker" class="form-label">Date of Birth :</label>
+                    <div class="input-group date">
+                        <input type="text" class="form-control" id="datepicker">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="ad_05" class="form-label">Address Line 05 :</label>
-                    <input type="text" class="form-control" id="ad_05" placeholder="Included their postal code">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-select" id="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -259,7 +265,26 @@
 
             </div>
         </div>
+
     </div>
 </section>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Initialize datepicker
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd', // Date format
+            autoclose: true, // Close the datepicker when a date is selected
+            todayHighlight: true // Highlight today's date
+        });
+    });
+</script>
 </body>
 </html>
