@@ -5,15 +5,13 @@
     <title>Employee Services</title>
     <link rel="stylesheet" href="css/sale_service.css">
     <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/profile_picure.css">
+
     <!--=============== LINKS ===============-->
     <link rel="stylesheet" href="lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Bootstrap Datepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style_normalize.css">
@@ -109,30 +107,39 @@
         </div>
 
         <div class="row">
+<!--            <div class="col-md-4">-->
+<!--                <div class="form-group mb-4"> &lt;!&ndash; Added mb-4 class for increased bottom margin &ndash;&gt;-->
+<!--                    <label for="profile_picture" class="form-label">Profile Picture :</label>-->
+<!--                    <div class="input-group">-->
+<!--                        <input type="file" class="form-control" id="profile_picture">-->
+<!--                        <label class="input-group-text" for="profile_picture"><i class="bi bi-file-image"></i></label> &lt;!&ndash; You can use any icon library here &ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
             <div class="col-md-4">
-                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="profile_picture" class="form-label">Profile Picture :</label>
-                    <div class="input-group">
-                        <input type="file" class="form-control" id="profile_picture">
-                        <label class="input-group-text" for="profile_picture"><i class="bi bi-file-image"></i></label> <!-- You can use any icon library here -->
+                <div class="form-group mb-4">
+                    <label for="profileImg" class="form-label">Employee Picture :</label>
+                    <div class="card imgholder">
+                        <label for="profileImg" class="upload">
+                            <input type="file" name="" id="profileImg" accept="image/*">
+                            <i class="bi bi-plus-circle-dotted"></i>
+                        </label>
+                        <img id="previewImg" src="img/Profile-Icon.webp" alt="" width="100" height="100" class="img">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="datepicker" class="form-label">Date of Birth :</label>
-                    <div class="input-group date">
-                        <input type="text" class="form-control" id="datepicker">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                        </div>
-                    </div>
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                    <label for="emp_dob" class="form-label">Date of Birth :</label>
+                    <input type="text" class="form-control" id="emp_dob" placeholder="Type Employee DOB Here">
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                     <label for="gender" class="form-label">Gender</label>
                     <select class="form-select" id="gender">
                         <option value="female">Female</option>
@@ -158,7 +165,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                     <label for="access_role" class="form-label">Access Role</label>
                     <select class="form-select" id="access_role">
                         <option value="admin">ADMIN</option>
@@ -314,15 +321,6 @@
 <!-- Bootstrap Datepicker JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-<script>
-    $(document).ready(function(){
-        // Initialize datepicker
-        $('#datepicker').datepicker({
-            format: 'yyyy-mm-dd', // Date format
-            autoclose: true, // Close the datepicker when a date is selected
-            todayHighlight: true // Highlight today's date
-        });
-    });
-</script>
+<script src="js/profile_picture.js"></script>
 </body>
 </html>
