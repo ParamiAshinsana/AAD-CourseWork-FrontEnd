@@ -1,0 +1,39 @@
+.payment-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.payment-container .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.payment-container .inputBox {
+    margin-bottom: 15px;
+}
+.payment-container .inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.payment-container .flex {
+    display: flex;
+    justify-content: space-between;
+}
+.payment-container .submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.payment-container .submit-btn:hover {
+    background-color: #0056b3;
+}
