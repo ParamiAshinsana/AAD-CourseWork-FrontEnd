@@ -34,50 +34,62 @@
         <a href="#" class="navLogo">
             <img src="img/qwe.png" class="logo img-fluid" width="110px" height="100px">
         </a>
-
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="home.html" class="nav__link">Home</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="sale_services.html" class="nav__link">Sale Services</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="customer_services.html" class="nav__link">Customers</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="employee_services.html" class="nav__link">Employees</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="supplier_services.html" class="nav__link">Suppliers</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="inventory.html" class="nav__link">Inventory</a>
                 </li>
             </ul>
-
             <!-- Close button -->
             <div class="nav__close" id="nav-close">
                 <i class="ri-close-line"></i>
             </div>
         </div>
-
         <div class="nav__actions">
-
-            <!-- Login button -->
-            <i class="ri-user-line nav__login" id="login-btn"></i>
-
+            <!-- Admin panel button -->
+            <div id="admin_panel" class="admin-panel-icon">
+                <i class="fa-solid fa-users-gear fa-2xl" style="color: #9e8f80;"></i>
+            </div>
             <!-- Toggle button -->
             <div class="nav__toggle" id="nav-toggle">
                 <i class="ri-menu-line"></i>
             </div>
         </div>
+        <div id="greetings">
+            <a href="customers_greetings.html" class="btn btn-light position-relative">
+                <i class="fa-solid fa-envelopes-bulk fa-2xl" style="color: #9e8f80;"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        🥳+
+    </span>
+            </a>
+        </div>
+        <div id="admin_panel_popup" class="admin-panel-popup">
+            <h3>Users Control</h3>
+            <ul>
+                <li class="admin-panel-item">
+                    <a href="admin_panel_services.html" class="panel_link">◽Admin Panel Service</a>
+                </li>
+                <li class="admin-panel-item">
+                    <a href="user_services.html" class="panel_link">◽User Service</a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 </section>
 
@@ -190,7 +202,7 @@
                 <form>
                     <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
                         <label for="emp_branch" class="form-label">Attached Branch :</label>
-                        <input type="text" class="form-control" id="emp_branch" placeholder="Join Date here">
+                        <input type="text" class="form-control" id="emp_branch" placeholder="Which branch attached">
                     </div>
                 </form>
             </div>
@@ -292,20 +304,23 @@
                 <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
                     <thead>
                     <tr>
-                        <th scope="col">Customer Code</th>
-                        <th scope="col">Customer Name</th>
+                        <th scope="col">Employee Code</th>
+                        <th scope="col">Employee Name</th>
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Join Date</th>
-                        <th scope="col">Total Loyalty Point</th>
-                        <th scope="col">Address</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Attached Branch</th>
                         <th scope="col">Contact</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Recent Date</th>
-                        <th scope="col">Recent Time</th>
+                        <th scope="col">Inform in Case of Emergency</th>
+                        <th scope="col">Emergency Contact</th>
                     </tr>
                     </thead>
-                    <tbody id="employee-tbl-body"></tbody>
+                    <tbody id="employee-tbl-body">
+
+
+                    </tbody>
                 </table>
 
             </div>
@@ -322,5 +337,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
 <script src="js/profile_picture.js"></script>
+<script src="js/pop-up.js"></script>
+
 </body>
 </html>
