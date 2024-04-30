@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Design || Future Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: #adacac;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header_fixed {
+            max-height: 100vh;
+            width: 100%;
+            overflow: auto;
+            border: 1px solid #dddddd;
+        }
+
+        .header_fixed thead th {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: #e6e7e8;
+            font-size: 15px;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #dddddd;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        td img {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            border: 5px solid #e6e7e8;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #edeef1;
+        }
+
+        tr:hover td {
+            color: #44b478;
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+
+        td button {
+            border: none;
+            padding: 7px 20px;
+            border-radius: 20px;
+            background-color: black;
+            color: #e6e7e8;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    </style>
+</head>
+
+<body>
+<div class="header_fixed">
+    <table>
+        <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Image</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_ /></td>
+            <td>Rakhi Gupta</td>
+            <td>rakhigupta@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1KV8Ob2wXIcobIvayGGDB1qUpQn_iZKIp /></td>
+            <td>Anjali</td>
+            <td>anjali@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1ock7haLmYaAbHe8yn9H8ZGgkaGY9lcB0 /></td>
+            <td>Vejata Gupta</td>
+            <td>Vejata@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1MbkS3AwaCNaKfMTmCQMHD1okQEubCdnt /></td>
+            <td>Shweta</td>
+            <td>Shweta@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1oztRYJUSZ5txDbaAAGg0O8_Ek6nzLAId /></td>
+            <td>Adarsh</td>
+            <td>Adarsh@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1ysB5QChCSLpz3igUoDzalENFsjJEe8H7 /></td>
+            <td>Monti</td>
+            <td>Monti@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1fCtvhYFy1roieanYeXua1jKJyfUhiDS6 /></td>
+            <td>Arpit</td>
+            <td>Arpit@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><img src=https://drive.google.com/thumbnail?id=1ZHPBm7fBxfbW2qV8pLTeDvMreXzqcW-x /></td>
+            <td>Priya</td>
+            <td>priya@gmail.com</td>
+            <td>Engineering</td>
+            <td><button>View</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
