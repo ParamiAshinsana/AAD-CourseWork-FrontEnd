@@ -35,50 +35,62 @@
         <a href="#" class="navLogo">
             <img src="img/qwe.png" class="logo img-fluid" width="110px" height="100px">
         </a>
-
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="home.html" class="nav__link">Home</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="sale_services.html" class="nav__link">Sale Services</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="customer_services.html" class="nav__link">Customers</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="employee_services.html" class="nav__link">Employees</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="supplier_services.html" class="nav__link">Suppliers</a>
                 </li>
-
                 <li class="nav__item">
                     <a href="inventory.html" class="nav__link">Inventory</a>
                 </li>
             </ul>
-
             <!-- Close button -->
             <div class="nav__close" id="nav-close">
                 <i class="ri-close-line"></i>
             </div>
         </div>
-
         <div class="nav__actions">
-
-            <!-- Login button -->
-            <i class="ri-user-line nav__login" id="login-btn"></i>
-
+            <!-- Admin panel button -->
+            <div id="admin_panel" class="admin-panel-icon">
+                <i class="fa-solid fa-users-gear fa-2xl" style="color: #9e8f80;"></i>
+            </div>
             <!-- Toggle button -->
             <div class="nav__toggle" id="nav-toggle">
                 <i class="ri-menu-line"></i>
             </div>
         </div>
+        <div id="greetings">
+            <a href="customers_greetings.html" class="btn btn-light position-relative">
+                <i class="fa-solid fa-envelopes-bulk fa-2xl" style="color: #9e8f80;"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        🥳+
+    </span>
+            </a>
+        </div>
+        <div id="admin_panel_popup" class="admin-panel-popup">
+            <h3>Users Control</h3>
+            <ul>
+                <li class="admin-panel-item">
+                    <a href="admin_panel_services.html" class="panel_link">◽Admin Panel Service</a>
+                </li>
+                <li class="admin-panel-item">
+                    <a href="user_services.html" class="panel_link">◽User Service</a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 </section>
 
@@ -268,6 +280,7 @@
 
 <script src="lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script src="js/home.js"></script>
+<script src="js/pop-up.js"></script>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -276,15 +289,5 @@
 <!-- Bootstrap Datepicker JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-<script>
-    $(document).ready(function(){
-        // Initialize datepicker
-        $('#datepicker').datepicker({
-            format: 'yyyy-mm-dd', // Date format
-            autoclose: true, // Close the datepicker when a date is selected
-            todayHighlight: true // Highlight today's date
-        });
-    });
-</script>
 </body>
 </html>
