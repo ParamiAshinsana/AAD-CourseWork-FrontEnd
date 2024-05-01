@@ -103,7 +103,7 @@
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                         <label for="customer_code" class="form-label">Customer Code :</label>
-                        <input type="text" disabled class="form-control" id="customer_code">
+                        <input type="text" class="form-control" id="customer_code">
                     </div>
 
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
@@ -166,12 +166,12 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="gender" class="form-label">Gender</label>
+                        <label for="customer_gender" class="form-label">Gender</label>
 <!--                        <input type="text" class="form-control" id="gender" placeholder="The gender of the customer">-->
-                        <select class="form-select" id="gender">
+                        <select class="form-select" id="customer_gender">
                             <!--                        <option selected>Select the Level...</option>-->
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
                         </select>
                     </div>
                 </form>
@@ -182,8 +182,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                    <label for="loyaldate" class="form-label">Join date as a loyalty customer :</label>
-                    <input type="text" class="form-control" id="loyaldate" placeholder="Date of the entitlement as a loyalty customer">
+                    <label for="customer_join_date" class="form-label">Join date as a loyalty customer :</label>
+                    <input type="text" class="form-control" id="customer_join_date" placeholder="Date of the entitlement as a loyalty customer">
                 </div>
             </div>
 
@@ -193,10 +193,10 @@
 <!--                    <input type="text" class="form-control" id="loyalty_level" placeholder="Gold, Silver, Bronze, New">-->
                     <select class="form-select" id="loyalty_level">
 <!--                        <option selected>Select the Level...</option>-->
-                        <option value="gold">Gold</option>
-                        <option value="silver">Silver</option>
-                        <option value="bronze">Bronze</option>
-                        <option value="new">New</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Bronze">Bronze</option>
+                        <option value="New">New</option>
                     </select>
                 </div>
             </div>
@@ -214,8 +214,8 @@
             <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                        <label for="contact" class="form-label">Contact :</label>
-                        <input type="text" class="form-control" id="contact" placeholder="Mobile number to contact">
+                        <label for="customer_contact" class="form-label">Contact :</label>
+                        <input type="text" class="form-control" id="customer_contact" placeholder="Mobile number to contact">
                     </div>
 
                     <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
@@ -244,7 +244,7 @@
 
         <div class="row">
             <div class="mt-5 m-5" id="customer-btns">
-                <button type="button" class="btn btn-outline-success">Register</button>
+                <button type="button" class="btn btn-outline-success" onclick="saveCustomer()">Register</button>
                 <button type="button" class="btn btn-outline-primary">Update</button>
                 <button type="button" class="btn btn-outline-danger">Delete</button>
                 <button type="reset" class="btn btn-outline-warning">Reset</button>
