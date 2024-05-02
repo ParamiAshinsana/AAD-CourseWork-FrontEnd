@@ -32,12 +32,16 @@ function saveCustomer(){
             "customerAddress":custAddress,
             "customerContact":custContact,
             "customerEmail":custEmail
+
         }),
 
         success: function (data){
             alert("Saved!!!")
             getAllCustomer();
         },
+
+
+
         error: function (xhr, exception){
             alert("Error!!!")
         },
