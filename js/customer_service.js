@@ -44,6 +44,51 @@ function saveCustomer(){
     })
 }
 
+
+// Customer Update
+
+function updateCustomer(){
+    let custCode = $('#customer_code').val();
+    let custName = $('#customer_name').val();
+    let custDOB = $('#customer_dob').val();
+    let custGender = $('#customer_gender').val();
+    let custJoinDate = $('#customer_join_date').val();
+    let custLoyaltyPoints = $('#total_points').val();
+    let custloyaltyLevel = $('#loyalty_level').val();
+    let custAddress = $('#ad_05').val();
+    let custContact = $('#customer_contact').val();
+    let custEmail = $('#customer_email').val();
+
+    $.ajax({
+        method:"PUT",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/customers/updateCustomer/"+custCode,
+        async:true,
+        data:JSON.stringify({
+            "customerCode":custCode,
+            "customerName":custName,
+            "customerDOB":custDOB,
+            "customerGender":custGender,
+            "customerJoinDate":custJoinDate,
+            "customerLoyaltyPoints":custLoyaltyPoints,
+            "loyaltyLevel":custloyaltyLevel,
+            "customerAddress":custAddress,
+            "customerContact":custContact,
+            "customerEmail":custEmail
+        }),
+
+        success: function (data){
+            alert("Updated!!!")
+            getAllCustomer();
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+
+    })
+}
+
+
 // Customer Delete
 
 function deleteCustomer(){
