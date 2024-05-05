@@ -1,6 +1,7 @@
 getAllSuppliers();
 var row_index = null;
 
+
 // Get All Suppliers
 function getAllSuppliers() {
     $.ajax({
