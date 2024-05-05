@@ -58,3 +58,97 @@ $("#supplier-tbl-body").on("click", "tr", function() {
     $("#supp_contact-2").val(suppContact02);
     $("#supp_email").val(suppEmail);
 })
+
+// Supplier Save
+
+function saveSupplier(){
+    let suppCode = $('#supp_code').val();
+    let suppName = $('#supp_name').val();
+    let category = $('#category').val();
+    let suppAddress01 = $('#ad_01').val();
+    let suppAddress02 = $('#ad_02').val();
+    let suppAddress03 = $('#ad_03').val();
+    let suppAddress04 = $('#ad_04').val();
+    let suppAddress05 = $('#ad_05').val();
+    let suppAddress06 = $('#ad_06').val();
+    let suppContact01 = $('#supp_contact-1').val();
+    let suppContact02 = $('#supp_contact-2').val();
+    let suppEmail = $('#supp_email').val();
+
+    $.ajax({
+        method:"POST",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/suppliers/saveSupplier",
+        async:true,
+        data:JSON.stringify({
+            "supplierCode":suppCode,
+            "supplierName":suppName,
+            "category":category,
+            "supplierAddress01":suppAddress01,
+            "supplierAddress02":suppAddress02,
+            "supplierAddress03":suppAddress03,
+            "supplierAddress04":suppAddress04,
+            "supplierAddress05":suppAddress05,
+            "supplierAddress06":suppAddress06,
+            "contactNo01":suppContact01,
+            "contactNo02":suppContact02,
+            "supplierEmail":suppEmail
+
+        }),
+
+        success: function (data){
+            alert("Saved!!!")
+            getAllSuppliers();
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+    })
+}
+
+// Supplier Update
+
+function updateSupplier(){
+    let suppCode = $('#supp_code').val();
+    let suppName = $('#supp_name').val();
+    let category = $('#category').val();
+    let suppAddress01 = $('#ad_01').val();
+    let suppAddress02 = $('#ad_02').val();
+    let suppAddress03 = $('#ad_03').val();
+    let suppAddress04 = $('#ad_04').val();
+    let suppAddress05 = $('#ad_05').val();
+    let suppAddress06 = $('#ad_06').val();
+    let suppContact01 = $('#supp_contact-1').val();
+    let suppContact02 = $('#supp_contact-2').val();
+    let suppEmail = $('#supp_email').val();
+
+    $.ajax({
+        method:"PUT",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/suppliers/updateSupplier/"+suppCode,
+        async:true,
+        data:JSON.stringify({
+            "supplierCode":suppCode,
+            "supplierName":suppName,
+            "category":category,
+            "supplierAddress01":suppAddress01,
+            "supplierAddress02":suppAddress02,
+            "supplierAddress03":suppAddress03,
+            "supplierAddress04":suppAddress04,
+            "supplierAddress05":suppAddress05,
+            "supplierAddress06":suppAddress06,
+            "contactNo01":suppContact01,
+            "contactNo02":suppContact02,
+            "supplierEmail":suppEmail
+        }),
+
+        success: function (data){
+            alert("Updated!!!")
+            getAllSuppliers();
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+
+    })
+}
