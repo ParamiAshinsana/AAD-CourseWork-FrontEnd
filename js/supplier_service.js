@@ -153,3 +153,24 @@ function updateSupplier(){
 
     })
 }
+
+// Supplier Delete
+
+function deleteSupplier(){
+    let suppCode = $('#supp_code').val();
+
+    $.ajax({
+        method:"DELETE",
+        url:"http://localhost:8080/api/v1/suppliers/deleteSupplier/"+suppCode,
+        async:true,
+
+        success: function (data){
+            alert("Deleted!!!")
+            getAllSuppliers();
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+
+    })
+}
