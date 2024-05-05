@@ -34,6 +34,12 @@
         #inventory-services{
             margin-top: 120px;
         }
+        #item_types{
+            /*border: 0.01px solid #9e8f80;*/
+            height: 180px;
+            width: 100%;
+            box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+        }
     </style>
 </head>
 <body>
@@ -110,10 +116,58 @@
                 <!-- First Form Column -->
                 <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <form>
+
                         <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
                             <label for="item_code" class="form-label">Item Code :</label>
                             <input type="text" class="form-control" id="item_code" placeholder="Type Item Code here">
                         </div>
+
+<!--                            <ul>-->
+<!--                                <li class="admin-panel-item">Admin Panel Service</li>-->
+<!--                                <li class="admin-panel-item">User Service</li>-->
+<!--                            </ul>-->
+<!--                            <dl>-->
+<!--                                <dt><b>Apple</b></dt>-->
+<!--                                <dd>A red colored fruit</dd>-->
+<!--                                <dt><b>Honda</b></dt>-->
+<!--                                <dd>A brand of a car</dd>-->
+<!--                                <dt><b>Spinach</b></dt>-->
+<!--                                <dd>A green leafy vegetable</dd>-->
+<!--                            </dl>-->
+                            <div id="item_types" style="display: grid; grid-template-columns: repeat(5, 1fr);">
+                                <dl style="color: #9e8f80;">
+                                    <dt><b>Gender</b></dt>
+                                    <dd>M-Male</dd>
+                                    <dd>F-Female</dd>
+                                </dl>
+                                <dl style="color: #9e8f80;">
+                                    <dt><b>Occasion</b></dt>
+                                    <dd>F-Formal</dd>
+                                    <dd>C-Casual</dd>
+                                    <dd>I-Industrial</dd>
+                                    <dd>S-Sports</dd>
+                                </dl>
+                                <dl style="color: #9e8f80;">
+                                    <dt><b>Verities</b></dt>
+                                    <dd>H-Heel</dd>
+                                    <dd>F-Flats</dd>
+                                    <dd>W-Wedges</dd>
+                                    <dd>FF-Flip Flops</dd>
+                                </dl>
+                                <dl style="color: #9e8f80;">
+                                    <br>
+                                    <dd>SD-Sandals</dd>
+                                    <dd>S-Shoes</dd>
+                                    <dd>SL-Slippers</dd>
+                                </dl>
+                                <dl style="color: #9e8f80;">
+                                    <dt><b>Types</b></dt>
+                                    <dd>SHMP: Shoe shampoo</dd>
+                                    <dd>SOF:Full-socks</dd>
+                                    <dd>SOH: Half-socks</dd>
+                                    <dd>POL-Polish</dd>
+                                </dl>
+                            </div>
 
                         <div class="form-group mb-4" style="margin-top:88px;"> <!-- Added mb-4 class for increased bottom margin -->
                             <label for="item_category" class="form-label">Category</label>
@@ -124,6 +178,8 @@
                                 <option value="sport">Sport</option>
                             </select>
                         </div>
+
+
 
                     </form>
                 </div>
