@@ -15,3 +15,23 @@ function getAllSuppliers() {
         }
     });
 }
+
+// Get Supplier Name
+
+function getSupplierName(){
+    let supplCode = $('#supp_code').val();
+
+    $.ajax({
+        method:"GET",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/suppliers/getSupplierName/"+supplCode,
+        async:true,
+            success: function(data) {
+                // Populate the supplier name input field
+                $('#supp_name').val(data);
+            },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+    })
+}
