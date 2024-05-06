@@ -108,7 +108,7 @@
 </section>
 
 <section id="inventory-services">
-    <h2>Suppliers Service</h2>
+    <h2>Inventory Service</h2>
     <div class="container">
         <div class="row">
 
@@ -234,9 +234,12 @@
                 <!-- First Form Column -->
                 <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <form>
+
                         <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                             <label for="supp_code" class="form-label">Supplier Code :</label>
-                            <input type="text" class="form-control" id="supp_code" placeholder="Unique ID for each supplier">
+                            <select class="form-select" id="supp_code">
+
+                            </select>
                         </div>
 
                         <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
@@ -335,10 +338,13 @@
     </div>
 </section>
 
+<script src="lib/lib/jquery.min.js"></script>
+<script src="js/inventory_service.js"></script>
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="js/profile_picture.js"></script>
 <script src="js/pop-up.js"></script>
+
 
 
 </body>
