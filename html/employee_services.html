@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Shoes</title>
+    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+
+    <link rel="stylesheet" href="../assets_own/css/profile_picure.css">
+
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .app-header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+
+<!--  Body Wrapper -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+            <div class="brand-logo d-flex align-items-center justify-content-between">
+                <h2>Hello Shoes</h2>
+                <a href="./index.html" class="text-nowrap logo-img">
+                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                </a>
+                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                    <i class="ti ti-x fs-8"></i>
+                </div>
+            </div>
+
+
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Home</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <!--              <i class="fa-solid fa-list-check fa-xl" style="color: #000000;"></i>-->
+                        <span class="hide-menu">SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-comments-dollar fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Sales</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-people-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Suppliers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="inventory.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-boxes-stacked fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-tie fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">AUTH</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Login</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-plus fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">CONTROL SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-gear fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Admin Panel Service</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="user_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-users-gear fa-xl" style="color: #1980eb;"></i>
+                </span>
+                            <span class="hide-menu">User Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-block d-xl-none">
+                        <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                            <i class="ti ti-menu-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                            <i class="ti ti-bell-ringing"></i>
+                            <div class="notification bg-primary rounded-circle"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                        <li class="nav-item">
+                            <a href="customers_greetings.html">
+            <span>
+              <i class="fa-solid fa-gift fa-xl" style="color: #3480eb;"></i>
+            </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile/admin.jpg" alt="" width="35" height="35" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                <div class="message-body" style="text-align: center;">
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="admin_panel_services.html" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                    </div>
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">Another Link</p>
+                                        </a>
+                                    </div>
+                                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--  Header End -->
+
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Employee Service Forms</h5>
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <!-- First Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="employee_code" class="form-label">Employee Code :</label>
+                                                <input type="text" disabled class="form-control" id="employee_code">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Second Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="employee_name" class="form-label">Employee Name :</label>
+                                                <input type="text" class="form-control" id="employee_name" placeholder="Type Employee Name here">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4">
+                                            <label for="profileImg" class="form-label">Employee Picture :</label>
+                                            <div class="card imgholder">
+                                                <label for="profileImg" class="upload">
+                                                    <input type="file" name="" id="profileImg" accept="image/*">
+                                                    <i class="bi bi-plus-circle-dotted"></i>
+                                                </label>
+                                                <img id="previewImg" src="../assets_own/img/emp-upload.png" alt="" width="100" height="100" class="img">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="emp_dob" class="form-label">Date of Birth :</label>
+                                            <input type="text" class="form-control" id="emp_dob" placeholder="Type Employee DOB Here">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="gender" class="form-label">Gender</label>
+                                            <select class="form-select" id="gender">
+                                                <option value="female">Female</option>
+                                                <option value="male">Male</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="employee_status" class="form-label">Status :</label>
+                                            <input type="text" class="form-control" id="employee_status" placeholder="Civil status of each employee">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="employee_designation" class="form-label">Designation :</label>
+                                            <input type="text" class="form-control" id="employee_designation" placeholder="Designation of the employee">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="access_role" class="form-label">Access Role</label>
+                                            <select class="form-select" id="access_role">
+                                                <option value="admin">ADMIN</option>
+                                                <option value="user">USER</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- First Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="join_dob" class="form-label">Date of Join :</label>
+                                                <input type="text" class="form-control" id="join_dob" placeholder="Join Date here">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Second Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_branch" class="form-label">Attached Branch :</label>
+                                                <input type="text" class="form-control" id="emp_branch" placeholder="Which branch attached">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <!-- First Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_ad01" class="form-label">Address 01 :</label>
+                                                <input type="text" class="form-control" id="emp_ad01" placeholder="Preferred their building no or name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Second Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_ad02" class="form-label">Address 02 :</label>
+                                                <input type="text" class="form-control" id="emp_ad02" placeholder="Preferred their lane">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="emp_ad03" class="form-label">Address 03 :</label>
+                                            <input type="text" class="form-control" id="emp_ad03" placeholder="Included their main city">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="emp_ad04" class="form-label">Address 04 :</label>
+                                            <input type="text" class="form-control" id="emp_ad04" placeholder="Included their main state">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="emp_ad05" class="form-label">Address 05 :</label>
+                                            <input type="text" class="form-control" id="emp_ad05" placeholder="Included their postal code">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- First Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_contact" class="form-label">Employee Contact :</label>
+                                                <input type="text" class="form-control" id="emp_contact" placeholder="Type Employee Contact here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_guardian" class="form-label">Inform in case of emergency :</label>
+                                                <input type="text" class="form-control" id="emp_guardian" placeholder="Name the guardian or nominated person">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <!-- Second Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_email" class="form-label">Employee Email :</label>
+                                                <input type="text" class="form-control" id="emp_email" placeholder="Type Employee Email here">
+                                            </div>
+
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="emp_emergency_contact" class="form-label">Emergency Contact :</label>
+                                                <input type="text" class="form-control" id="emp_emergency_contact" placeholder="Type Contact details here">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="mt-5 m-5" id="employee-btns">
+                                        <button type="button" class="btn btn-outline-success">Register</button>
+                                        <button type="button" class="btn btn-outline-primary">Update</button>
+                                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+
+                                        <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Employee Code</th>
+                                                <th scope="col">Employee Name</th>
+                                                <th scope="col">DOB</th>
+                                                <th scope="col">Gender</th>
+                                                <th scope="col">Join Date</th>
+                                                <th scope="col">Designation</th>
+                                                <th scope="col">Attached Branch</th>
+                                                <th scope="col">Contact</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Inform in Case of Emergency</th>
+                                                <th scope="col">Emergency Contact</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="employee-tbl-body">
+
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/sidebarmenu.js"></script>
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="../assets_own/js/profile_picture.js"></script>
+
+</body>
+</html>

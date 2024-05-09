@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Shoes</title>
+    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .app-header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+
+<!--  Body Wrapper -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+            <div class="brand-logo d-flex align-items-center justify-content-between">
+                <h2>Hello Shoes</h2>
+                <a href="./index.html" class="text-nowrap logo-img">
+                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                </a>
+                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                    <i class="ti ti-x fs-8"></i>
+                </div>
+            </div>
+
+
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Home</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <!--              <i class="fa-solid fa-list-check fa-xl" style="color: #000000;"></i>-->
+                        <span class="hide-menu">SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-comments-dollar fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Sales</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-people-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Suppliers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="inventory.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-boxes-stacked fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-tie fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">AUTH</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Login</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-plus fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">CONTROL SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-gear fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Admin Panel Service</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="user_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-users-gear fa-xl" style="color: #1980eb;"></i>
+                </span>
+                            <span class="hide-menu">User Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-block d-xl-none">
+                        <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                            <i class="ti ti-menu-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                            <i class="ti ti-bell-ringing"></i>
+                            <div class="notification bg-primary rounded-circle"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                        <li class="nav-item">
+                            <a href="customers_greetings.html">
+            <span>
+              <i class="fa-solid fa-gift fa-xl" style="color: #3480eb;"></i>
+            </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile/admin.jpg" alt="" width="35" height="35" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                <div class="message-body" style="text-align: center;">
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="admin_panel_services.html" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                    </div>
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">Another Link</p>
+                                        </a>
+                                    </div>
+                                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--  Header End -->
+
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Supplier Service Forms</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="supp_code" class="form-label">Supplier Code :</label>
+                                            <input type="text" class="form-control" id="supp_code" placeholder="Unique ID for each supplier">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="supp_name" class="form-label">Supplier Name :</label>
+                                            <input type="text" class="form-control" id="supp_name" placeholder="Name of the supplier">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="category" class="form-label">Category :</label>
+                                            <select class="form-select" id="category">
+                                                <option value="INTERNATIONAL">INTERNATIONAL</option>
+                                                <option value="LOCAL">LOCAL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_01" class="form-label">Address Line 01 :</label>
+                                            <input type="text" class="form-control" id="ad_01" placeholder="Preferred their building no or name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_02" class="form-label">Address Line 02 :</label>
+                                            <input type="text" class="form-control" id="ad_02" placeholder="Preferred their lane">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_03" class="form-label">Address Line 03 :</label>
+                                            <input type="text" class="form-control" id="ad_03" placeholder="Included their main city">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_04" class="form-label">Address Line 04 :</label>
+                                            <input type="text" class="form-control" id="ad_04" placeholder="Included their main state">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_05" class="form-label">Address Line 05 :</label>
+                                            <input type="text" class="form-control" id="ad_05" placeholder="Included their postal code">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="ad_06" class="form-label">Address Line 06 :</label>
+                                            <input type="text" class="form-control" id="ad_06" placeholder="Included their origin country">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="supp_contact-1" class="form-label">Supplier Contact 01 :</label>
+                                            <input type="text" class="form-control" id="supp_contact-1" placeholder="Mobile number to contact">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="supp_contact-2" class="form-label">Supplier Contact 02 :</label>
+                                            <input type="text" class="form-control" id="supp_contact-2" placeholder="Landline number to contact">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-5"> <!-- Added mb-4 class for increased bottom margin -->
+                                            <label for="supp_email" class="form-label">Supplier Email :</label>
+                                            <input type="text" class="form-control" id="supp_email" placeholder="Email to contact">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="mt-3 m-5" id="supplier-btns">
+                                        <button type="button" class="btn btn-outline-success" onclick="saveSupplier()">Add</button>
+                                        <button type="button" class="btn btn-outline-primary" onclick="updateSupplier()">Update</button>
+                                        <button type="button" class="btn btn-outline-danger" onclick="deleteSupplier()">Delete</button>
+                                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+
+                                        <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Supplier Code</th>
+                                                <th scope="col">Supplier Name</th>
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Address</th>
+                                                <th scope="col">Contact 01</th>
+                                                <th scope="col">Contact 02</th>
+                                                <th scope="col">Email</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="supplier-tbl-body"></tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/sidebarmenu.js"></script>
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+
+<script src="../assets_own/lib/lib/jquery.min.js"></script>
+<script src="../assets_own/js/pop-up.js"></script>
+<script src="../assets_own/js/supplier_service.js"></script>
+
+</body>
+</html>

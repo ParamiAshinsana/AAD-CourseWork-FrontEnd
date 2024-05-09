@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Shoes</title>
+    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="../assets_own/css/sale_service.css">
+    <link rel="stylesheet" href="../assets_own/css/payment_gateway.css">
+    <!--=============== LINKS ===============-->
+    <link rel="stylesheet" href="../assets_own/lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .app-header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!--  Body Wrapper -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+            <div class="brand-logo d-flex align-items-center justify-content-between">
+                <h2>Hello Shoes</h2>
+                <a href="./index.html" class="text-nowrap logo-img">
+                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                </a>
+                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                    <i class="ti ti-x fs-8"></i>
+                </div>
+            </div>
+
+
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Home</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <!--              <i class="fa-solid fa-list-check fa-xl" style="color: #000000;"></i>-->
+                        <span class="hide-menu">SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-comments-dollar fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Sales</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-people-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Suppliers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="inventory.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-boxes-stacked fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-tie fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">AUTH</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Login</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-plus fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">CONTROL SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-gear fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Admin Panel Service</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="user_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-users-gear fa-xl" style="color: #1980eb;"></i>
+                </span>
+                            <span class="hide-menu">User Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-block d-xl-none">
+                        <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                            <i class="ti ti-menu-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                            <i class="ti ti-bell-ringing"></i>
+                            <div class="notification bg-primary rounded-circle"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                        <li class="nav-item">
+                            <a href="customers_greetings.html">
+            <span>
+              <i class="fa-solid fa-gift fa-xl" style="color: #3480eb;"></i>
+            </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile/admin.jpg" alt="" width="35" height="35" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                <div class="message-body" style="text-align: center;">
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="admin_panel_services.html" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                    </div>
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">Another Link</p>
+                                        </a>
+                                    </div>
+                                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--  Header End -->
+
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Sale Service Forms</h5>
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <!-- First Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="order_no" class="form-label">Order No :</label>
+                                                <input type="text" disabled class="form-control" id="order_no" placeholder="Type Order No here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="item_code" class="form-label">Item Code :</label>
+                                                <input type="text" class="form-control" id="item_code" placeholder="Type Item Code here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="item_price" class="form-label">Item Price :</label>
+                                                <input type="text" class="form-control" id="item_price" placeholder="Type Item Price here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="item_qty" class="form-label">Item Quantity :</label>
+                                                <input type="text" class="form-control" id="item_qty" placeholder="Type Item Quantity here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="pr_date" class="form-label">Purchase date :</label>
+                                                <input type="text" class="form-control" id="pr_date">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="points" class="form-label">Added points :</label>
+                                                <input type="text" class="form-control" id="points" placeholder="Points of Loyalty customers here">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <!-- Second Form Column -->
+                                    <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <form>
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="customer_name" class="form-label">Customer Name :</label>
+                                                <input type="text" class="form-control" id="customer_name" placeholder="Type Customer Name here">
+                                            </div>
+
+                                            <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="item_des" class="form-label">Item Description :</label>
+                                                <input type="text" class="form-control" id="item_des" placeholder="Type Item Description here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="shoe_size" class="form-label">Shoes Size</label>
+                                                <input type="text" class="form-control" id="shoe_size" placeholder="Size of a shoe">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="total_price" class="form-label">Total Price :</label>
+                                                <input type="text" class="form-control" id="total_price" placeholder="Type Item Price here">
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="payment_method" class="form-label">Payment Method :</label>
+                                                <select class="form-select" id="payment_method">
+                                                    <option value="cash">Cash</option>
+                                                    <option value="card">Card</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="cardModalLabel">Card Payment Details</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!-- Your message content here -->
+                                                            <!--                                    <p>Enter card payment details here...</p>-->
+                                                            <div class="payment-container">
+                                                                <form action="">
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <h3 class="title">Payment</h3>
+                                                                            <div class="inputBox">
+                                                                                <span>Cards Accepted:</span>
+                                                                                <img src="../assets_own/img/card_img.png" alt="">
+                                                                            </div>
+                                                                            <div class="inputBox">
+                                                                                <span>Name on Card:</span>
+                                                                                <input type="text" placeholder="Mr. John Deo">
+                                                                            </div>
+                                                                            <div class="inputBox">
+                                                                                <span>Credit Card Number:</span>
+                                                                                <input type="text" placeholder="1111-2222-3333-4444">
+                                                                            </div>
+                                                                            <div class="inputBox">
+                                                                                <span>Exp Month:</span>
+                                                                                <input type="text" placeholder="January">
+                                                                            </div>
+                                                                            <div class="flex">
+                                                                                <div class="inputBox">
+                                                                                    <span>Exp Year:</span>
+                                                                                    <input type="text" placeholder="2022">
+                                                                                </div>
+                                                                                <div class="inputBox">
+                                                                                    <span>CVV:</span>
+                                                                                    <input type="text" placeholder="1234">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="button" value="Proceed to Checkout" class="submit-btn">
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                <label for="cashier_name" class="form-label">Cashier name :</label>
+                                                <input type="text" class="form-control" id="cashier_name" placeholder="Type Cashier Name here">
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="mt-5 m-5" id="sale-btns">
+                                        <button type="button" class="btn btn-outline-success">Add</button>
+                                        <button type="button" class="btn btn-outline-primary">Update</button>
+                                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                    </div>
+
+                                    <div class="col">
+                                        <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Order No</th>
+                                                <th scope="col">Item Code</th>
+                                                <th scope="col">Customer Name</th>
+                                                <th scope="col">Item Quantity</th>
+                                                <th scope="col">Total Price</th>
+                                                <th scope="col">Purchase Date</th>
+                                                <th scope="col">Payment Method</th>
+                                                <th scope="col">Added Points</th>
+                                                <th scope="col">Cashier Name</th>
+                                                <th scope="col">Action</th> <!-- New column for Action -->
+                                            </tr>
+                                            </thead>
+                                            <tbody id="sale-tbl-body">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John Doe</td>
+                                                <td>1234567890</td>
+                                                <td>123 Main St</td>
+                                                <td>John Doe</td>
+                                                <td>1234567890</td>
+                                                <td>123 Main St</td>
+                                                <td>1234567890</td>
+                                                <td>123 Main St</td>
+                                                <td><button class="btn btn-danger">Refund</button></td> <!-- Refund button -->
+                                            </tr>
+                                            <!-- Add similar rows with refund button for each row -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/sidebarmenu.js"></script>
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+
+<script src="../assets_own/lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    // JavaScript to show modal when card is selected
+    $(document).ready(function() {
+        const paymentMethodSelect = $('#payment_method');
+        paymentMethodSelect.change(function() {
+            if ($(this).val() === 'card') {
+                $('#cardModal').modal('show'); // Show the modal
+            }
+        });
+    });
+</script>
+</body>
+</html>

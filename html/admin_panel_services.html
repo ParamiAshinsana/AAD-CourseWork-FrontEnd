@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Shoes</title>
+    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets_own/css/home.css">
+    <link rel="stylesheet" href="../assets_own/css/navigation.css">
+    <link rel="stylesheet" href="../assets_own/css/profile_picure.css">
+    <link rel="stylesheet" href="../assets_own/lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style_normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+
+    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        #admin-services{
+            /*margin-top: 120px;*/
+            padding-top: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .admin-container {
+            height: 200px; /* Set the desired height */
+            /*border: 1px solid #ccc; !* Add a border *!*/
+            margin-bottom: 20px; /* Add space between each div */
+
+           padding-left: 10px;
+           padding-right: 20px;
+            width: 50%;
+
+        }
+        .app-header {
+            /*padding-bottom: 10px; !* Adjust the value as needed *!*/
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sale-items{
+           border: 1px solid #ccc;
+            width: 1000px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!--  Body Wrapper -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+            <div class="brand-logo d-flex align-items-center justify-content-between">
+                <h2>Hello Shoes</h2>
+                <a href="./index.html" class="text-nowrap logo-img">
+                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                </a>
+                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                    <i class="ti ti-x fs-8"></i>
+                </div>
+            </div>
+
+
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Home</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <!--              <i class="fa-solid fa-list-check fa-xl" style="color: #000000;"></i>-->
+                        <span class="hide-menu">SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-comments-dollar fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Sales</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-people-group fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Suppliers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="inventory.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-boxes-stacked fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-tie fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">AUTH</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Login</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-plus fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">CONTROL SERVICES</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-user-gear fa-xl" style="color: #3480eb;"></i>
+                </span>
+                            <span class="hide-menu">Admin Panel Service</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="user_services.html" aria-expanded="false">
+                <span>
+                  <i class="fa-solid fa-users-gear fa-xl" style="color: #1980eb;"></i>
+                </span>
+                            <span class="hide-menu">User Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-block d-xl-none">
+                        <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                            <i class="ti ti-menu-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                            <i class="ti ti-bell-ringing"></i>
+                            <div class="notification bg-primary rounded-circle"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                        <li class="nav-item">
+                            <a href="customers_greetings.html">
+            <span>
+              <i class="fa-solid fa-gift fa-xl" style="color: #3480eb;"></i>
+            </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile/admin.jpg" alt="" width="35" height="35" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                <div class="message-body" style="text-align: center;">
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="admin_panel_services.html" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                    </div>
+                                    <div style="margin-bottom: 30px;">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 fs-3">Another Link</p>
+                                        </a>
+                                    </div>
+                                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--  Header End -->
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Admin Panel Service Forms</h5>
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="admin-container" style="border: 1px solid #ccc;">
+                                        <div class="row">
+                                            <!-- First Form Column -->
+                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <form>
+                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                        <!--                        <label for="contact" class="form-label">Contact :</label>-->
+
+                                                        <div class="container mt-5">
+                                                            <label id="selected_sale_date" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
+                                                            <!--                            <h2>Select a Date:</h2>-->
+                                                            <button id="show-calendar-btn" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
+                                                        </div>
+
+                                                        <!-- Datepicker container -->
+                                                        <div id="datepicker-container" class="d-none">
+                                                            <div id="datepicker"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                            <!-- Second Form Column -->
+                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
+                                                <form>
+                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                        <label for="selected_date_sales" class="form-label" style="color: #9e8f80;">Total Sales of a Selected Date :</label>
+                                                        <input type="email" class="form-control" id="selected_date_sales" placeholder="Total Sales of a Selected Date">
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="admin-container" style="border: 1px solid #ccc;">
+                                        <div class="row">
+                                            <!-- First Form Column -->
+                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <form>
+                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                        <!--                        <label for="contact" class="form-label">Contact :</label>-->
+
+                                                        <div class="container mt-5">
+                                                            <label id="selected_profit_date" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
+                                                            <!--                            <h2>Select a Date:</h2>-->
+                                                            <button id="show-calendar-btn-profit" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
+                                                        </div>
+
+                                                        <!-- Datepicker container -->
+                                                        <div id="datepicker-profit-container" class="d-none">
+                                                            <div id="datepicker-profit"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                            <!-- Second Form Column -->
+                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
+                                                <form>
+                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                        <label for="selected_date_profits" class="form-label" style="color: #9e8f80;">Total Profits of a Selected Date :</label>
+                                                        <input type="email" class="form-control" id="selected_date_profits" placeholder="Total Profits of a Selected Date">
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="admin-container" style="width: 1000px;">
+                                        <div class="sale-items">
+                                            <div class="row">
+                                                <!-- First Form Column -->
+                                                <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <form>
+                                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                            <!--                        <label for="contact" class="form-label">Contact :</label>-->
+
+                                                            <div class="container mt-5">
+                                                                <label id="selected_date_sale_item" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
+                                                                <!--                            <h2>Select a Date:</h2>-->
+                                                                <button id="show-calendar-btn-sale-item" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
+                                                            </div>
+
+                                                            <!-- Datepicker container -->
+                                                            <div id="datepicker-sale-item-container" class="d-none">
+                                                                <div id="datepicker-sale-item"></div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                                <!-- Second Form Column -->
+                                                <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                                    <label for="ad_03" class="form-label">Address Line 03 :</label>
+                                                                    <input type="text" class="form-control" id="ad_03" placeholder="Included their main city">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group mb-4">
+                                                                    <label for="profileImg" class="form-label">Item Picture :</label>
+                                                                    <div class="card imgholder">
+                                                                        <label for="profileImg" class="upload">
+                                                                            <input type="file" name="" id="profileImg" accept="image/*">
+                                                                            <i class="bi bi-plus-circle-dotted"></i>
+                                                                        </label>
+                                                                        <img id="previewImg" src="img/icons-upload.png" alt="" width="100" height="100" class="img">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
+                                                                    <label for="ad_05" class="form-label">Address Line 05 :</label>
+                                                                    <input type="text" class="form-control" id="ad_05" placeholder="Included their postal code">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/sidebarmenu.js"></script>
+<script src="../assets/js/app.min.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+
+<!-- JavaScript -->
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Include Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Your custom JavaScript files -->
+<script src="../assets_own/js/home.js"></script>
+<script src="../assets_own/js/pop-up.js"></script>
+<script src="../assets_own/js/admin_panel.js"></script>
+<script src="../assets_own/js/profile_picture.js"></script>
+
+</body>
+</html>
