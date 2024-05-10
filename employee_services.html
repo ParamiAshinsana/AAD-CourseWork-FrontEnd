@@ -45,7 +45,7 @@
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <h2>Hello Shoes</h2>
                 <a href="index.html" class="text-nowrap logo-img">
-                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                    <img src="img/HelloShoeLogo.png" width="100px" alt="" />
                 </a>
                 <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                     <i class="ti ti-x fs-8"></i>
@@ -295,8 +295,8 @@
                                         <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                                             <label for="gender" class="form-label">Gender</label>
                                             <select class="form-select" id="gender">
-                                                <option value="female">Female</option>
-                                                <option value="male">Male</option>
+                                                <option value="FEMALE">FEMALE</option>
+                                                <option value="MALE">MALE</option>
                                             </select>
                                         </div>
                                     </div>
@@ -321,8 +321,8 @@
                                         <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
                                             <label for="access_role" class="form-label">Access Role</label>
                                             <select class="form-select" id="access_role">
-                                                <option value="admin">ADMIN</option>
-                                                <option value="user">USER</option>
+                                                <option value="ADMIN">ADMIN</option>
+                                                <option value="USER">USER</option>
                                             </select>
                                         </div>
                                     </div>
@@ -333,8 +333,8 @@
                                     <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <form>
                                             <div class="form-group mb-4"><!-- Added mb-4 class for increased bottom margin -->
-                                                <label for="join_dob" class="form-label">Date of Join :</label>
-                                                <input type="text" class="form-control" id="join_dob" placeholder="Join Date here">
+                                                <label for="join_date" class="form-label">Date of Join :</label>
+                                                <input type="text" class="form-control" id="join_date" placeholder="Join Date here">
                                             </div>
                                         </form>
                                     </div>
@@ -432,7 +432,7 @@
 
                                 <div class="row">
                                     <div class="mt-5 m-5" id="employee-btns">
-                                        <button type="button" class="btn btn-outline-success">Register</button>
+                                        <button type="button" class="btn btn-outline-success" id="saveButton">Register</button>
                                         <button type="button" class="btn btn-outline-primary">Update</button>
                                         <button type="button" class="btn btn-outline-danger">Delete</button>
                                         <button type="reset" class="btn btn-outline-warning">Reset</button>
