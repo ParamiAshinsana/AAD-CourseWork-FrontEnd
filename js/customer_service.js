@@ -168,3 +168,6 @@ $("#customer-tbl-body").on("click", "tr", function() {
     $("#customer_contact").val(custContact);
     $("#customer_email").val(custEmail);
 })
+
+
+
