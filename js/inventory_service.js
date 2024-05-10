@@ -41,30 +41,41 @@ function getSupplierName(){
 $(document).ready(function() {
     $('#saveButton').click(function() {
         var i_code = $('#item_code').val();
-        var I_desc = $('#exampleFormControlInput2').val();
+        var I_desc = $('#item_desc').val();
         var fileInput = $('#profileImg')[0].files[0];
-        var i_category = $('#exampleFormControlInput1').val();
-        var i_qty = $('#exampleFormControlInput2').val();
-        var i_size = $('#exampleFormControlInput1').val();
-        var i_unitPriceSale = $('#exampleFormControlInput2').val();
-        var i_unitPriceBuy = $('#exampleFormControlInput1').val();
-        var i_expectedProfit = $('#exampleFormControlInput2').val();
-        var i_profitMargin = $('#exampleFormControlInput1').val();
+        var i_category = $('#item_category').val();
+        var i_size = $('#item_qty').val();
+        var i_qty = $('#shoe-size').val();
+        var supplier_code = $('#supp_code').val();
+        var i_unitPriceSale = $('#sale_unit_price').val();
+        var i_unitPriceBuy = $('#buy_unit_price').val();
+        var i_expectedProfit = $('#expected_profit').val();
+        var i_profitMargin = $('#profit_margin').val();
 
         var formData = new FormData();
 
+        formData.append('iCode', i_code);
+        formData.append('iDesc', I_desc);
         formData.append('files', fileInput);
-        formData.append('id', studentId);
-        formData.append('name', studentName);
+        formData.append('iCategory', i_category);
+        formData.append('iSize', i_size);
+        formData.append('iQty', i_qty);
+        formData.append('supCode', supplier_code);
+        formData.append('iUnitPriceSale', i_unitPriceSale);
+        formData.append('iUnitPriceBuy', i_unitPriceBuy);
+        formData.append('iExpectedProfit', i_expectedProfit);
+        formData.append('iProfitMargin', i_profitMargin);
+
 
         $.ajax({
-            url:"http://localhost:9090/api/v1/student/saveStudent",
+            url:"http://localhost:8080/api/v1/inventory/saveInventory",
             type: 'POST',
             data: formData,
             processData: false,
             mimeType: "multipart/form-data",
             contentType: false,
             success: function(response) {
+                alert("Saved!!!")
                 console.log('Image uploaded successfully.');
             },
             error: function(xhr, status, error) {
