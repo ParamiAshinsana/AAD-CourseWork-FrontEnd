@@ -140,6 +140,8 @@ function getAllCustomer() {
     });
 }
 
+
+
 // when click a row
 $("#customer-tbl-body").on("click", "tr", function() {
     row_index = $(this).index();
