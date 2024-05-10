@@ -29,7 +29,6 @@ function getAllEmployees() {
 
 
 // Save the Employee
-
 $(document).ready(function() {
     $('#saveButton').click(function() {
         var emCode = $('#employee_code').val();
