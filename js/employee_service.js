@@ -84,3 +84,32 @@ $(document).ready(function() {
         });
     });
 });
+
+// Employee Delete
+
+$(document).ready(function() {
+    $('#deleteButton').click(function() {
+        var emCode = $('#employee_code').val();
+
+        if (!emCode) {
+            alert("Please enter an employee code.");
+            return;
+        }
+
+        $.ajax({
+            url: "http://localhost:8080/api/v1/employee/deleteEmployee/" + emCode,
+            type: 'DELETE',
+            success: function(response) {
+                alert("Deleted successfully!");
+                console.log('Employee deleted successfully.');
+                getAllEmployees(); // Assuming you have a function to refresh the employee list
+            },
+            error: function(xhr, status, error) {
+                console.error('Error deleting employee:', error);
+                alert('Failed to delete employee.');
+            }
+        });
+    });
+});
+
+
