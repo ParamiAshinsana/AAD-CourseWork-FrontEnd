@@ -58,13 +58,13 @@ a{
 }
 
 /*-- COMPONENT --*/
-.card{
-    /*position: relative;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*padding: 1.5rem 2rem;*/
-    /*border-radius: 1rem;*/
+.card x{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
     overflow: hidden;
 }
 article:nth-child(1){
