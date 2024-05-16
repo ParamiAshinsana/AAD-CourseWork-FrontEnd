@@ -187,21 +187,6 @@ $("#employee-tbl-body").on("click", "tr", function() {
     let emGuardianName = $(this).find(".nameTheGuardian").text();
     let emEmergencyContact = $(this).find(".emergencyContact").text();
 
-    var emCode = $('#employee_code').val();
-    var emName = $('#employee_name').val();
-    var fileInput = $('#profileImg')[0].files[0];
-    var emDob = $('#emp_dob').val();
-    var emGender = $('#gender').val();
-    var emStatus = $('#employee_status').val();
-    var emDesignation = $('#employee_designation').val();
-    var emAccessRole = $('#access_role').val();
-    var emJoinedDate = $('#join_date').val();
-    var emBranch = $('#emp_branch').val();
-    var emAddress = $('#emp_ad05').val();
-    var emContact = $('#customer_contact').val();
-    var emEmail = $('#emp_email').val();
-    var emGuardianName = $('#emp_guardian').val();
-    var emEmergencyContact = $('#emp_emergency_contact').val();
 
     $("#employee_code").val(emCode);
     $("#employee_name").val(emName);
