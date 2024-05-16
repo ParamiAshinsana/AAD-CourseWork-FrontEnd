@@ -1,4 +1,5 @@
 getAllEmployees();
+var row_index = null;
 
 // Get All Employees
 function getAllEmployees() {
@@ -165,5 +166,41 @@ $(document).ready(function() {
         });
     });
 });
+
+
+// when click a row
+$("#employee-tbl-body").on("click", "tr", function() {
+    row_index = $(this).index();
+
+    let emCode = $(this).find(".employeeCode").text();
+    let emName = $(this).find(".employeeName").text();
+    let emDob = $(this).find(".employeeDob").text();
+    let emGender = $(this).find(".employeeGender").text();
+    let emStatus = $(this).find(".employeeStatus").text();
+    let emDesignation = $(this).find(".employeeDesignation").text();
+    let emAccessRole = $(this).find(".employeeAccessRole").text();
+    let emJoinedDate = $(this).find(".employeeJoinedDate").text();
+    let emBranch = $(this).find(".attachedBranch").text();
+    let emAddress = $(this).find(".employeeAddress").text();
+    let emContact = $(this).find(".employeeContact").text();
+    let emEmail = $(this).find(".employeeEmail").text();
+    let emGuardianName = $(this).find(".nameTheGuardian").text();
+    let emEmergencyContact = $(this).find(".emergencyContact").text();
+
+    $("#customer_code").val(emCode);
+    $("#customer_code").val(emName);
+    $("#customer_code").val(emDob);
+    $("#customer_name").val(emGender);
+    $("#customer_dob").val(emStatus);
+    $("#customer_gender").val(emDesignation);
+    $("#customer_join_date").val(emAccessRole);
+    $("#customer_join_date").val(emJoinedDate);
+    $("#total_points").val(emBranch);
+    $("#loyalty_level").val(emAddress);
+    $("#ad_05").val(emContact);
+    $("#customer_contact").val(emEmail);
+    $("#customer_email").val(emGuardianName);
+    $("#customer_email").val(emEmergencyContact);
+})
 
 
