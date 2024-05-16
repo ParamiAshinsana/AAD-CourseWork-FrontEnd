@@ -212,11 +212,11 @@ $("#employee-tbl-body").on("click", "tr", function() {
     $("#access_role").val(emAccessRole);
     $("#join_date").val(emJoinedDate);
     $("#emp_branch").val(emBranch);
-    $("#loyalty_level").val(emAddress);
-    $("#ad_05").val(emContact);
-    $("#customer_contact").val(emEmail);
-    $("#customer_email").val(emGuardianName);
-    $("#customer_email").val(emEmergencyContact);
+    $("#emp_ad05").val(emAddress);
+    $("#emp_contact").val(emContact);
+    $("#emp_email").val(emEmail);
+    $("#emp_guardian").val(emGuardianName);
+    $("#emp_emergency_contact").val(emEmergencyContact);
 })
 
 
