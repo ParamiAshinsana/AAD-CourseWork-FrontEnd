@@ -112,4 +112,58 @@ $(document).ready(function() {
     });
 });
 
+// Update the Employee
+$(document).ready(function() {
+    $('#updateButton').click(function() {
+        var empCode = $('#employee_code').val();
+        var empName = $('#employee_name').val();
+        var fileInput = $('#profileImg')[0].files[0];
+        var empDOB = $('#emp_dob').val();
+        var empGender = $('#gender').val();
+        var empStatus = $('#employee_status').val();
+        var empDesignation = $('#employee_designation').val();
+        var empAccessRole = $('#access_role').val();
+        var empJoinedDate = $('#join_date').val();
+        var empBranch = $('#emp_branch').val();
+        var empAddress = $('#emp_address').val();
+        var empContact = $('#emp_contact').val();
+        var empEmail = $('#emp_email').val();
+        var empGuardianName = $('#emp_guardian').val();
+        var empEmergencyContact = $('#emp_emergency_contact').val();
+
+        var formData = new FormData();
+
+        formData.append('empName', empName);
+        formData.append('files', fileInput);
+        formData.append('empDOB', empDOB);
+        formData.append('empGender', empGender);
+        formData.append('empStatus', empStatus);
+        formData.append('empDesignation', empDesignation);
+        formData.append('empAccessRole', empAccessRole);
+        formData.append('empJoinedDate', empJoinedDate);
+        formData.append('empBranch', empBranch);
+        formData.append('empAddress', empAddress);
+        formData.append('empContact', empContact);
+        formData.append('empEmail', empEmail);
+        formData.append('empGuardianNAme', empGuardianName);
+        formData.append('empEmergencyContact', empEmergencyContact);
+
+        $.ajax({
+            url: `http://localhost:8080/api/v1/employee/updateEmployee/${empCode}`,
+            type: 'PUT',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                alert("Employee updated successfully!");
+                console.log('Employee updated successfully.');
+                getAllEmployees();
+            },
+            error: function(xhr, status, error) {
+                console.error('Error updating employee:', error);
+            }
+        });
+    });
+});
+
 
