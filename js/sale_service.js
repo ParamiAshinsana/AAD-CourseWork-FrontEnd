@@ -45,6 +45,21 @@ function handleCustomerClick() {
     getShoeSize();
 }
 
+function getItemDescription() {
+    // Implementation for getting supplier name
+    console.log("Getting Supplier Name");
+}
+
+function getItemPrice() {
+    // Implementation for getting supplier age
+    console.log("Getting Supplier Age");
+}
+
+function getShoeSize() {
+    // Implementation for getting supplier email
+    console.log("Getting Supplier Email");
+}
+
 
 
 $('#pr_date').click(function () {
