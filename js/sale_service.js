@@ -1,4 +1,5 @@
 getAllCustomers();
+getAllItemCodes();
 
 // Get All Customer Codes
 function getAllCustomers() {
@@ -45,16 +46,53 @@ function handleInventoryClick() {
     getShoeSize();
 }
 
+
+// Get All Item Codes
+function getAllItemCodes() {
+    $.ajax({
+        method:"GET",
+        url:"http://localhost:8080/api/v1/inventory/getAllItemCodes",
+        async:true,
+        success: function(data) {
+            $("#item_code").empty();
+            data.forEach(function(itemCode) {
+                let option = `<option value="${itemCode}">${itemCode}</option>`;
+                $("#item_code").append(option);
+            });
+        }
+    });
+}
+
+
+// Get Item Description
 function getItemDescription() {
     // Implementation for getting supplier name
     console.log("Getting Supplier Name");
+
+    let inventoryCode = $('#item_code').val();
+
+    $.ajax({
+        method:"GET",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        async:true,
+        success: function(data) {
+            // Populate the supplier name input field
+            $('#item_des').val(data);
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+    })
 }
 
+// Get Item Price
 function getItemPrice() {
     // Implementation for getting supplier age
     console.log("Getting Supplier Age");
 }
 
+// Get Item Size
 function getShoeSize() {
     // Implementation for getting supplier email
     console.log("Getting Supplier Email");
