@@ -4,13 +4,13 @@ getAllCustomers();
 function getAllCustomers() {
     $.ajax({
         method:"GET",
-        url:"http://localhost:8080/api/v1/suppliers/getAllSupplierCode",
+        url:"http://localhost:8080/api/v1/customers/getAllCustomerCode",
         async:true,
         success: function(data) {
-            $("#supp_code").empty();
-            data.forEach(function(supplierCode) {
-                let option = `<option value="${supplierCode}">${supplierCode}</option>`;
-                $("#supp_code").append(option);
+            $("#custo_code").empty();
+            data.forEach(function(customerCode) {
+                let option = `<option value="${customerCode}">${customerCode}</option>`;
+                $("#custo_code").append(option);
             });
         }
     });
