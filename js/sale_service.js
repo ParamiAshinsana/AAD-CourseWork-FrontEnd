@@ -20,16 +20,16 @@ function getAllCustomers() {
 // Get Customer Name
 
 function getCustomerName(){
-    let supplCode = $('#supp_code').val();
+    let cussCode = $('#custo_code').val();
 
     $.ajax({
         method:"GET",
         contentType:"application/json",
-        url:"http://localhost:8080/api/v1/suppliers/getSupplierName/"+supplCode,
+        url:"http://localhost:8080/api/v1/customers/getCustomerName/"+cussCode,
         async:true,
         success: function(data) {
             // Populate the supplier name input field
-            $('#supp_name').val(data);
+            $('#customer_name').val(data);
         },
         error: function (xhr, exception){
             alert("Error!!!")
