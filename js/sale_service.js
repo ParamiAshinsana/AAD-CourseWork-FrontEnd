@@ -74,7 +74,7 @@ function getItemDescription() {
     $.ajax({
         method:"GET",
         contentType:"application/json",
-        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        url:"http://localhost:8080/api/v1/inventory/getInventoryDescription/"+inventoryCode,
         async:true,
         success: function(data) {
             // Populate the supplier name input field
@@ -86,16 +86,49 @@ function getItemDescription() {
     })
 }
 
+
 // Get Item Price
 function getItemPrice() {
     // Implementation for getting supplier age
     console.log("Getting Supplier Age");
+
+    let inventoryCode = $('#item_code').val();
+
+    $.ajax({
+        method:"GET",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        async:true,
+        success: function(data) {
+            // Populate the supplier name input field
+            $('#item_price').val(data);
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+    })
 }
 
 // Get Item Size
 function getShoeSize() {
     // Implementation for getting supplier email
     console.log("Getting Supplier Email");
+
+    let inventoryCode = $('#item_code').val();
+
+    $.ajax({
+        method:"GET",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        async:true,
+        success: function(data) {
+            // Populate the supplier name input field
+            $('#shoe_size').val(data);
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+    })
 }
 
 
