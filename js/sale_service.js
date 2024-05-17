@@ -39,7 +39,7 @@ function getCustomerName(){
 
 //-----Get Inventory Details
 
-function handleCustomerClick() {
+function handleInventoryClick() {
     getItemDescription();
     getItemPrice();
     getShoeSize();
