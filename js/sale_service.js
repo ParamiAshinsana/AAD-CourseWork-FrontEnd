@@ -37,6 +37,14 @@ function getCustomerName(){
     })
 }
 
+//-----Get Inventory Details
+
+function handleCustomerClick() {
+    getItemDescription();
+    getItemPrice();
+    getShoeSize();
+}
+
 
 
 $('#pr_date').click(function () {
