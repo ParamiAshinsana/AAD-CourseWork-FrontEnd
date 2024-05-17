@@ -119,7 +119,7 @@ function getShoeSize() {
     $.ajax({
         method:"GET",
         contentType:"application/json",
-        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        url:"http://localhost:8080/api/v1/inventory/getShoeSize/"+inventoryCode,
         async:true,
         success: function(data) {
             // Populate the supplier name input field
