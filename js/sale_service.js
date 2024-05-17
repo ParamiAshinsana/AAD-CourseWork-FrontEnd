@@ -97,7 +97,7 @@ function getItemPrice() {
     $.ajax({
         method:"GET",
         contentType:"application/json",
-        url:"http://localhost:8080/api/v1/inventory/getInventoryDetails/"+inventoryCode,
+        url:"http://localhost:8080/api/v1/inventory/getInventoryPrice/"+inventoryCode,
         async:true,
         success: function(data) {
             // Populate the supplier name input field
