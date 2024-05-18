@@ -42,8 +42,8 @@ function getCustomerName(){
 
 function handleInventoryClick() {
     getItemDescription();
-    getItemPrice();
-    getShoeSize();
+    // getItemPrice();
+    // getShoeSize();
 }
 
 
@@ -64,7 +64,7 @@ function getAllItemCodes() {
 }
 
 
-// Get Item Description
+//Get Item Description
 function getItemDescription() {
     // Implementation for getting supplier name
     console.log("Getting Supplier Name");
@@ -79,57 +79,59 @@ function getItemDescription() {
         success: function(data) {
             // Populate the supplier name input field
             $('#item_des').val(data);
+            $('#item_price').val(data);
+            $('#shoe_size').val(data);
         },
         error: function (xhr, exception){
-            alert("Error!!!")
+            alert(" description Error!!!")
         },
     })
 }
 
 
 // Get Item Price
-function getItemPrice() {
-    // Implementation for getting supplier age
-    console.log("Getting Supplier Age");
-
-    let inventoryCode = $('#item_code').val();
-
-    $.ajax({
-        method:"GET",
-        contentType:"application/json",
-        url:"http://localhost:8080/api/v1/inventory/getInventoryPrice/"+inventoryCode,
-        async:true,
-        success: function(data) {
-            // Populate the supplier name input field
-            $('#item_price').val(data);
-        },
-        error: function (xhr, exception){
-            alert("Error!!!")
-        },
-    })
-}
-
-// Get Item Size
-function getShoeSize() {
-    // Implementation for getting supplier email
-    console.log("Getting Supplier Email");
-
-    let inventoryCode = $('#item_code').val();
-
-    $.ajax({
-        method:"GET",
-        contentType:"application/json",
-        url:"http://localhost:8080/api/v1/inventory/getShoeSize/"+inventoryCode,
-        async:true,
-        success: function(data) {
-            // Populate the supplier name input field
-            $('#shoe_size').val(data);
-        },
-        error: function (xhr, exception){
-            alert("Error!!!")
-        },
-    })
-}
+// function getItemPrice() {
+//     // Implementation for getting supplier age
+//     console.log("Getting Supplier Age");
+//
+//     let inventoryCode = $('#item_code').val();
+//
+//     $.ajax({
+//         method:"GET",
+//         contentType:"application/json",
+//         url:"http://localhost:8080/api/v1/inventory/getInventoryPrice/"+inventoryCode,
+//         async:true,
+//         success: function(data) {
+//             // Populate the supplier name input field
+//             $('#item_price').val(data);
+//         },
+//         error: function (xhr, exception){
+//             alert(" price Error!!!")
+//         },
+//     })
+// }
+//
+// // Get Item Size
+// function getShoeSize() {
+//     // Implementation for getting supplier email
+//     console.log("Getting Supplier Email");
+//
+//     let inventoryCode = $('#item_code').val();
+//
+//     $.ajax({
+//         method:"GET",
+//         contentType:"application/json",
+//         url:"http://localhost:8080/api/v1/inventory/getShoeSize/"+inventoryCode,
+//         async:true,
+//         success: function(data) {
+//             // Populate the supplier name input field
+//             $('#shoe_size').val(data);
+//         },
+//         error: function (xhr, exception){
+//             alert("Shoe Error!!!")
+//         },
+//     })
+// }
 
 
 
