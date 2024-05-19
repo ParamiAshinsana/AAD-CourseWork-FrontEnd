@@ -4,7 +4,7 @@ var row_index = null;
 
 // Customers Save
 
-function saveCustomer(){
+function saveCustomer() {
     let custCode = $('#customer_code').val();
     let custName = $('#customer_name').val();
     let custDOB = $('#customer_dob').val();
@@ -17,32 +17,31 @@ function saveCustomer(){
     let custEmail = $('#customer_email').val();
 
     $.ajax({
-        method:"POST",
-        contentType:"application/json",
-        url:"http://localhost:8080/api/v1/customers/saveCustomer",
-        async:true,
-        data:JSON.stringify({
-            "customerCode":custCode,
-            "customerName":custName,
-            "customerDOB":custDOB,
-            "customerGender":custGender,
-            "customerJoinDate":custJoinDate,
-            "customerLoyaltyPoints":custLoyaltyPoints,
-            "loyaltyLevel":custloyaltyLevel,
-            "customerAddress":custAddress,
-            "customerContact":custContact,
-            "customerEmail":custEmail
+        method: "POST",
+        contentType: "application/json",
+        url: "http://localhost:8080/api/v1/customers/saveCustomer",
+        async: true,
+        data: JSON.stringify({
+            "customerCode": custCode,
+            "customerName": custName,
+            "customerDOB": custDOB,
+            "customerGender": custGender,
+            "customerJoinDate": custJoinDate,
+            "customerLoyaltyPoints": custLoyaltyPoints,
+            "loyaltyLevel": custloyaltyLevel,
+            "customerAddress": custAddress,
+            "customerContact": custContact,
+            "customerEmail": custEmail
 
         }),
 
-        success: function (data){
+        success: function (data) {
             alert("Saved!!!")
             getAllCustomer();
         },
 
 
-
-        error: function (xhr, exception){
+        error: function (xhr, exception) {
             alert("Error!!!")
         },
     })
@@ -51,7 +50,7 @@ function saveCustomer(){
 
 // Customer Update
 
-function updateCustomer(){
+function updateCustomer() {
     let custCode = $('#customer_code').val();
     let custName = $('#customer_name').val();
     let custDOB = $('#customer_dob').val();
@@ -64,28 +63,28 @@ function updateCustomer(){
     let custEmail = $('#customer_email').val();
 
     $.ajax({
-        method:"PUT",
-        contentType:"application/json",
-        url:"http://localhost:8080/api/v1/customers/updateCustomer/"+custCode,
-        async:true,
-        data:JSON.stringify({
-            "customerCode":custCode,
-            "customerName":custName,
-            "customerDOB":custDOB,
-            "customerGender":custGender,
-            "customerJoinDate":custJoinDate,
-            "customerLoyaltyPoints":custLoyaltyPoints,
-            "loyaltyLevel":custloyaltyLevel,
-            "customerAddress":custAddress,
-            "customerContact":custContact,
-            "customerEmail":custEmail
+        method: "PUT",
+        contentType: "application/json",
+        url: "http://localhost:8080/api/v1/customers/updateCustomer/" + custCode,
+        async: true,
+        data: JSON.stringify({
+            "customerCode": custCode,
+            "customerName": custName,
+            "customerDOB": custDOB,
+            "customerGender": custGender,
+            "customerJoinDate": custJoinDate,
+            "customerLoyaltyPoints": custLoyaltyPoints,
+            "loyaltyLevel": custloyaltyLevel,
+            "customerAddress": custAddress,
+            "customerContact": custContact,
+            "customerEmail": custEmail
         }),
 
-        success: function (data){
+        success: function (data) {
             alert("Updated!!!")
             getAllCustomer();
         },
-        error: function (xhr, exception){
+        error: function (xhr, exception) {
             alert("Error!!!")
         },
 
@@ -95,19 +94,19 @@ function updateCustomer(){
 
 // Customer Delete
 
-function deleteCustomer(){
+function deleteCustomer() {
     let custCode = $('#customer_code').val();
 
     $.ajax({
-        method:"DELETE",
-        url:"http://localhost:8080/api/v1/customers/deleteCustomer/"+custCode,
-        async:true,
+        method: "DELETE",
+        url: "http://localhost:8080/api/v1/customers/deleteCustomer/" + custCode,
+        async: true,
 
-        success: function (data){
+        success: function (data) {
             alert("Deleted!!!")
             getAllCustomer();
         },
-        error: function (xhr, exception){
+        error: function (xhr, exception) {
             alert("Error!!!")
         },
 
@@ -118,17 +117,16 @@ function deleteCustomer(){
 // Get All Customers
 function getAllCustomer() {
     $.ajax({
-        method:"GET",
-        url:"http://localhost:8080/api/v1/customers/getAllCustomer",
-        async:true,
-        success: function(data) {
+        method: "GET",
+        url: "http://localhost:8080/api/v1/customers/getAllCustomer",
+        async: true,
+        success: function (data) {
             $("#customer-tbl-body").empty();
-            data.forEach(function(customerService) {
+            data.forEach(function (customerService) {
                 let record = `<tr><td class="customerCode">${customerService.customerCode}</td>
                                          <td class="customerName">${customerService.customerName}</td>
                                          <td class="customerDOB">${customerService.customerDOB}</td>
                                          <td class="customerGender">${customerService.customerGender}</td>
-                                         // <td class="customerGender">${customerService.customerGender},${customerService.customerGender}</td>
                                          <td class="customerJoinDate">${customerService.customerJoinDate}</td>
                                          <td class="customerLoyaltyPoints">${customerService.customerLoyaltyPoints}</td>
                                          <td class="loyaltyLevel">${customerService.loyaltyLevel}</td>
@@ -141,10 +139,11 @@ function getAllCustomer() {
     });
 }
 
+//  <td class="customerGender">${customerService.customerGender},${customerService.customerGender}</td>
 
 
 // when click a row
-$("#customer-tbl-body").on("click", "tr", function() {
+$("#customer-tbl-body").on("click", "tr", function () {
     row_index = $(this).index();
 
     let custCode = $(this).find(".customerCode").text();
