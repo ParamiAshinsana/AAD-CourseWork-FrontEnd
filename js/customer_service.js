@@ -127,7 +127,7 @@ function getAllCustomer() {
                 let record = `<tr><td class="customerCode">${customerService.customerCode}</td>
                                          <td class="customerName">${customerService.customerName}</td>
                                          <td class="customerDOB">${customerService.customerDOB}</td>
-                                         <td class="customerGender">${customerService.customerGender}</td>
+                                         <td class="customerGender">${customerService.customerGender},${customerService.customerGender}</td>
                                          <td class="customerJoinDate">${customerService.customerJoinDate}</td>
                                          <td class="customerLoyaltyPoints">${customerService.customerLoyaltyPoints}</td>
                                          <td class="loyaltyLevel">${customerService.loyaltyLevel}</td>
