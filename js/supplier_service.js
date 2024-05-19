@@ -30,35 +30,35 @@ function getAllSuppliers() {
 }
 
 // when click a row
-// $("#supplier-tbl-body").on("click", "tr", function() {
-//     row_index = $(this).index();
-//
-//     let suppCode = $(this).find(".supplierCode").text();
-//     let suppName = $(this).find(".supplierName").text();
-//     let category = $(this).find(".category").text();
-//     let suppAddress01 = $(this).find(".supplierAddress01").text();
-//     let suppAddress02 = $(this).find(".supplierAddress02").text();
-//     let suppAddress03 = $(this).find(".supplierAddress03").text();
-//     let suppAddress04 = $(this).find(".supplierAddress04").text();
-//     let suppAddress05 = $(this).find(".supplierAddress05").text();
-//     let suppAddress06 = $(this).find(".supplierAddress06").text();
-//     let suppContact01 = $(this).find(".contactNo01").text();
-//     let suppContact02 = $(this).find(".contactNo02").text();
-//     let suppEmail = $(this).find(".supplierEmail").text();
-//
-//     $("#supp_code").val(suppCode);
-//     $("#supp_name").val(suppName);
-//     $("#category").val(category);
-//     $("#ad_01").val(suppAddress01);
-//     $("#ad_02").val(suppAddress02);
-//     $("#ad_03").val(suppAddress03);
-//     $("#ad_04").val(suppAddress04);
-//     $("#ad_05").val(suppAddress05);
-//     $("#ad_06").val(suppAddress06);
-//     $("#supp_contact-1").val(suppContact01);
-//     $("#supp_contact-2").val(suppContact02);
-//     $("#supp_email").val(suppEmail);
-// })
+$("#supplier-tbl-body").on("click", "tr", function() {
+    row_index = $(this).index();
+
+    let suppCode = $(this).find(".supplierCode").text();
+    let suppName = $(this).find(".supplierName").text();
+    let category = $(this).find(".category").text();
+    let suppAddress01 = $(this).find(".supplierAddress01").text();
+    let suppAddress02 = $(this).find(".supplierAddress02").text();
+    let suppAddress03 = $(this).find(".supplierAddress03").text();
+    let suppAddress04 = $(this).find(".supplierAddress04").text();
+    let suppAddress05 = $(this).find(".supplierAddress05").text();
+    let suppAddress06 = $(this).find(".supplierAddress06").text();
+    let suppContact01 = $(this).find(".contactNo01").text();
+    let suppContact02 = $(this).find(".contactNo02").text();
+    let suppEmail = $(this).find(".supplierEmail").text();
+
+    $("#supp_code").val(suppCode);
+    $("#supp_name").val(suppName);
+    $("#category").val(category);
+    $("#ad_01").val(suppAddress01);
+    $("#ad_02").val(suppAddress02);
+    $("#ad_03").val(suppAddress03);
+    $("#ad_04").val(suppAddress04);
+    $("#ad_05").val(suppAddress05);
+    $("#ad_06").val(suppAddress06);
+    $("#supp_contact-1").val(suppContact01);
+    $("#supp_contact-2").val(suppContact02);
+    $("#supp_email").val(suppEmail);
+})
 
 // Supplier Save
 
