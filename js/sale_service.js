@@ -77,10 +77,11 @@ function getItemDescription() {
         url:"http://localhost:8080/api/v1/inventory/getInventoryDescription/"+inventoryCode,
         async:true,
         success: function(data) {
+            console.log(data[0].itemDescription)
             // Populate the supplier name input field
-            $('#item_des').val(data);
-            $('#item_price').val(data);
-            $('#shoe_size').val(data);
+            $('#item_des').val(data[0].itemDescription);
+            $('#item_price').val(data[0].unitPriceSale);
+            $('#shoe_size').val(data[0].itemSize);
         },
         error: function (xhr, exception){
             alert(" description Error!!!")
