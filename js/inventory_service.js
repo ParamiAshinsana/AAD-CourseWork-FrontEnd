@@ -77,6 +77,7 @@ $(document).ready(function() {
             contentType: false,
             success: function(response) {
                 alert("Saved!!!")
+                getAllInventories();
                 console.log('Image uploaded successfully.');
             },
             error: function(xhr, status, error) {
@@ -88,6 +89,31 @@ $(document).ready(function() {
 
 
 // Get All Inventories
+// function getAllInventories() {
+//     console.log("1232343Inventory")
+//     $.ajax({
+//         method:"GET",
+//         url:"http://localhost:8080/api/v1/inventory/getAllInventory",
+//         async:true,
+//         success: function(data) {
+//             $("#inventory-tbl-body").empty();
+//             data.forEach(function(inventoryService) {
+//                 let record = `<tr><td class="itemCode">${inventoryService.itemCode}</td>
+//                                          <td class="itemDescription">${inventoryService.itemDescription}</td>
+//                                          <td class="category">${inventoryService.category}</td>
+//                                          <td class="itemSize">${inventoryService.itemSize}</td>
+//                                          <td class="itemQty">${inventoryService.itemQty}</td>
+//                                          <td class="supplierEntity">${inventoryService.supplierEntity}</td>
+//                                          <td class="unitPriceSale">${inventoryService.unitPriceSale}</td>
+//                                          <td class="expectedProfit">${inventoryService.expectedProfit}</td>
+//                                          <td class="profitMargin">${inventoryService.profitMargin}</td></tr>`;
+//                 $("#inventory-tbl-body").append(record);
+//             });
+//         }
+//     });
+// }
+
+
 function getAllInventories() {
     console.log("1232343Inventory")
     $.ajax({
@@ -102,9 +128,8 @@ function getAllInventories() {
                                          <td class="category">${inventoryService.category}</td>
                                          <td class="itemSize">${inventoryService.itemSize}</td>
                                          <td class="itemQty">${inventoryService.itemQty}</td>
-                                         <td class="supplierEntity">${inventoryService.supplierEntity}</td>
+                                         <td class="supplierEntity">${inventoryService.supplierEntity.supplierCode}</td>
                                          <td class="unitPriceSale">${inventoryService.unitPriceSale}</td>
-                                         <td class="unitPriceBuy">${inventoryService.unitPriceBuy}</td>
                                          <td class="expectedProfit">${inventoryService.expectedProfit}</td>
                                          <td class="profitMargin">${inventoryService.profitMargin}</td></tr>`;
                 $("#inventory-tbl-body").append(record);
