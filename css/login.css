@@ -143,13 +143,13 @@ form.sign-in-form {
 
 .social-icon:hover {
   /*color: #F86F03;*/
-  color: #9e8f80;
-  border-color: #9e8f80;
+  color: #3480eb;
+  border-color: #3480eb;
 }
 
 .btn {
   width: 150px;
-  background-color: #9e8f80;
+  background-color: #3480eb;
   border: none;
   outline: none;
   height: 49px;
@@ -163,7 +163,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #3480eb;
+  background-color: #527ab3;
   /*background-color: #f98c39;*/
 }
 .input-field:hover{
