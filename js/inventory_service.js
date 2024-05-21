@@ -183,3 +183,33 @@ function getAllInventories() {
         }
     });
 }
+
+
+// when click a row
+$("#inventory-tbl-body").on("click", "tr", function() {
+    row_index = $(this).index();
+
+    let i_code = $(this).find(".employeeCode").text();
+    let I_desc = $(this).find(".employeeName").text();
+    let i_category = $(this).find(".employeeGender").text();
+    let i_size = $(this).find(".employeeStatus").text();
+    let i_qty = $(this).find(".employeeDesignation").text();
+    let supplier_code = $(this).find(".employeeAccessRole").text();
+    let i_unitPriceSale = $(this).find(".employeeJoinedDate").text();
+    let i_unitPriceBuy = $(this).find(".attachedBranch").text();
+    let i_expectedProfit = $(this).find(".employeeAddress").text();
+    let i_profitMargin = $(this).find(".employeeContact").text();
+
+
+    $("#item_code").val(i_code);
+    $("#item_desc").val(I_desc);
+    $("#item_category").val(i_category);
+    $("#item_qty").val(i_size);
+    $("#shoe-size").val(i_qty);
+    $("#supp_code").val(supplier_code);
+    $("#sale_unit_price").val(i_unitPriceSale);
+    $("#buy_unit_price").val(i_unitPriceBuy);
+    $("#expected_profit").val(i_expectedProfit);
+    $("#profit_margin").val(i_profitMargin);
+
+})
