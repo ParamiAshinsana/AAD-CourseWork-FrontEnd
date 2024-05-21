@@ -87,6 +87,52 @@ $(document).ready(function() {
     });
 });
 
+// Update the Inventory
+$(document).ready(function() {
+    $('#updateButton').click(function() {
+        var i_code = $('#item_code').val();
+        var I_desc = $('#item_desc').val();
+        var fileInput = $('#profileImg')[0].files[0];
+        var i_category = $('#item_category').val();
+        var i_size = $('#item_qty').val();
+        var i_qty = $('#shoe-size').val();
+        var supplier_code = $('#supp_code').val();
+        var i_unitPriceSale = $('#sale_unit_price').val();
+        var i_unitPriceBuy = $('#buy_unit_price').val();
+        var i_expectedProfit = $('#expected_profit').val();
+        var i_profitMargin = $('#profit_margin').val();
+
+        var formData = new FormData();
+
+        formData.append('iDesc', I_desc);
+        formData.append('files', fileInput);
+        formData.append('iCategory', i_category);
+        formData.append('iSize', i_size);
+        formData.append('iQty', i_qty);
+        formData.append('supCode', supplier_code);
+        formData.append('iUnitPriceSale', i_unitPriceSale);
+        formData.append('iUnitPriceBuy', i_unitPriceBuy);
+        formData.append('iExpectedProfit', i_expectedProfit);
+        formData.append('iProfitMargin', i_profitMargin);
+
+        $.ajax({
+            url: `http://localhost:8080/api/v1/inventory/updateInventory/${i_code}`,
+            type: 'PUT',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                alert("Inventory updated successfully!");
+                console.log('Inventory updated successfully.');
+                getAllEmployees();
+            },
+            error: function(xhr, status, error) {
+                console.error('Error updating Inventory :', error);
+            }
+        });
+    });
+});
+
 
 // Get All Inventories
 // function getAllInventories() {
