@@ -1,6 +1,8 @@
 getAllSuppliers();
 getAllInventories();
 
+var row_index = null;
+
 // Get All Supplier Codes
 function getAllSuppliers() {
     $.ajax({
@@ -187,18 +189,19 @@ function getAllInventories() {
 
 // when click a row
 $("#inventory-tbl-body").on("click", "tr", function() {
+    console.log("Hello Parami")
     row_index = $(this).index();
 
-    let i_code = $(this).find(".employeeCode").text();
-    let I_desc = $(this).find(".employeeName").text();
-    let i_category = $(this).find(".employeeGender").text();
-    let i_size = $(this).find(".employeeStatus").text();
-    let i_qty = $(this).find(".employeeDesignation").text();
-    let supplier_code = $(this).find(".employeeAccessRole").text();
-    let i_unitPriceSale = $(this).find(".employeeJoinedDate").text();
-    let i_unitPriceBuy = $(this).find(".attachedBranch").text();
-    let i_expectedProfit = $(this).find(".employeeAddress").text();
-    let i_profitMargin = $(this).find(".employeeContact").text();
+    let i_code = $(this).find(".itemCode").text();
+    let I_desc = $(this).find(".itemDescription").text();
+    let i_category = $(this).find(".category").text();
+    let i_size = $(this).find(".itemSize").text();
+    let i_qty = $(this).find(".itemQty").text();
+    let supplierEntity = $(this).find(".supplierEntity").text();
+    let i_unitPriceSale = $(this).find(".unitPriceSale").text();
+    let i_unitPriceBuy = $(this).find(".unitPriceBuy").text();
+    let i_expectedProfit = $(this).find(".expectedProfit").text();
+    let i_profitMargin = $(this).find(".profitMargin").text();
 
 
     $("#item_code").val(i_code);
@@ -206,7 +209,7 @@ $("#inventory-tbl-body").on("click", "tr", function() {
     $("#item_category").val(i_category);
     $("#item_qty").val(i_size);
     $("#shoe-size").val(i_qty);
-    $("#supp_code").val(supplier_code);
+    $("#supp_code").val(supplierEntity);
     $("#sale_unit_price").val(i_unitPriceSale);
     $("#buy_unit_price").val(i_unitPriceBuy);
     $("#expected_profit").val(i_expectedProfit);
