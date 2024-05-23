@@ -427,6 +427,7 @@
 <script src="assets/js/dashboard.js"></script>
 
 <script src="/js/sale_service.js"></script>
+<script src="/js/pop-up.js"></script>
 
 <!--<script src="../lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
 <!-- Include jQuery -->
@@ -441,7 +442,7 @@
     $(document).ready(function() {
         const paymentMethodSelect = $('#payment_method');
         paymentMethodSelect.change(function() {
-            if ($(this).val() === 'card') {
+            if ($(this).val() === 'Card') {
                 $('#cardModal').modal('show'); // Show the modal
             }
         });
