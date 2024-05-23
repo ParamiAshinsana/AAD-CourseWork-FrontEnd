@@ -153,6 +153,47 @@ function GetTodayDate() {
 }
 
 
+// function saveSale() {
+//     let orderNo = $('#order_no').val();
+//     let customerCode = $('#custo_code').val();
+//     let itemCode = $('#item_code').val();
+//     let itemQty = $('#item_qty').val();
+//     let purchaseDate = $('#pr_date').val();
+//     let addedPoints = $('#points').val();
+//     let totalPrice = $('#total_price').val();
+//     let paymentMethod = $('#payment_method').val();
+//     let cashierName = $('#cashier_name').val();
+//
+//     $.ajax({
+//         method: "POST",
+//         contentType: "application/json",
+//         url: "http://localhost:8080/api/v1/sales/saveSale",
+//         async: true,
+//         data: JSON.stringify({
+//             "orderNo": orderNo,
+//             "customerCode": customerCode,
+//             "itemCode": itemCode,
+//             "orderItemQty": itemQty,
+//             "totalPrice": totalPrice,
+//             "purchaseDate": purchaseDate,
+//             "paymentMethod": paymentMethod,
+//             "addedPoints": addedPoints,
+//             "cashierName": cashierName
+//         }),
+//
+//         success: function (data) {
+//             alert("Sale saved successfully!");
+//             console.log("Saved")
+//             // Refresh the sales list or perform any other actions
+//         },
+//
+//         error: function (xhr, exception) {
+//             alert("Error saving sale!");
+//             console.log("Error")
+//         },
+//     });
+// }
+
 function saveSale() {
     let orderNo = $('#order_no').val();
     let customerCode = $('#custo_code').val();
@@ -171,8 +212,12 @@ function saveSale() {
         async: true,
         data: JSON.stringify({
             "orderNo": orderNo,
-            "customerCode": customerCode,
-            "itemCode": itemCode,
+            "cusDTO": {
+                "customerCode": customerCode
+            },
+            "invDTO": {
+                "itemCode": itemCode
+            },
             "orderItemQty": itemQty,
             "totalPrice": totalPrice,
             "purchaseDate": purchaseDate,
@@ -180,16 +225,15 @@ function saveSale() {
             "addedPoints": addedPoints,
             "cashierName": cashierName
         }),
-
         success: function (data) {
             alert("Sale saved successfully!");
-            console.log("Saved")
+            console.log("Saved");
             // Refresh the sales list or perform any other actions
         },
-
         error: function (xhr, exception) {
             alert("Error saving sale!");
-            console.log("Error")
+            console.log("Error");
         },
     });
 }
+
