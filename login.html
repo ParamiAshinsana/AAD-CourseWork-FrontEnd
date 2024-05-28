@@ -6,6 +6,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <title>Sign in & Sign up Form</title>
 </head>
@@ -20,11 +21,11 @@
         <h2 class="title">Sign In</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
+          <input type="text" id="login_username" placeholder="Username" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
+          <input type="password" id="login_password" placeholder="Password" />
         </div>
         <input type="submit" value="Sign In" class="btn solid" />
         <p class="social-text">Or Sign in with social platforms</p>
@@ -48,16 +49,20 @@
         <!--        <h2 class="title">Sign up</h2>-->
         <h2 class="title">Sign Up</h2>
         <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
-        </div>
-        <div class="input-field">
           <i class="fas fa-envelope"></i>
           <input type="email" placeholder="Email" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
           <input type="password" placeholder="Password" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" />
+        </div>
+        <div class="input-field">
+          <i class="fa-solid fa-id-card"></i>
+          <input type="text" placeholder="Role" />
         </div>
         <input type="submit" class="btn" value="Sign up" />
         <p class="social-text">Or Sign up with social platforms</p>
@@ -82,10 +87,10 @@
   <div class="panels-container">
     <div class="panel left-panel">
       <div class="content">
-        <h3>New to our community ?</h3>
+        <h3>New around here ?</h3>
         <p>
-          Discover a world of possibilities! Join us and explore a vibrant
-          community where ideas flourish and connections thrive.
+          Discover your potential! Join us and become part of a
+          spirited community where ideas thrive and connections are made.
         </p>
         <button class="btn transparent" id="sign-up-btn">
           Sign up
@@ -96,10 +101,10 @@
     </div>
     <div class="panel right-panel">
       <div class="content">
-        <h3>One of Our Valued Members</h3>
+        <h3>One of Our Esteemed Users</h3>
         <p>
-          Thank you for being part of our community. Your presence enriches our
-          shared experiences. Let's continue this journey together!
+          We’re glad you’re part of our community.
+          Your presence enhances our shared moments. Let’s keep progressing together!
         </p>
         <button class="btn transparent" id="sign-in-btn">
           Sign in
