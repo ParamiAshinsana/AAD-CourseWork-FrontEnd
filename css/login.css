@@ -423,3 +423,38 @@ form.sign-in-form {
 #home:target, #sale-services:target{
   display: block;
 }
+.loginButton{
+  width: 150px;
+  background-color: #3480eb;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.loginButton:hover {
+  background-color: #527ab3;
+  /*background-color: #f98c39;*/
+}
+
+.loginButton.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.loginButton.transparent {
+  width: 110px;
+  height: 35px;
+  font-size: 0.7rem;
+}
