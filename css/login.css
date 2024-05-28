@@ -85,7 +85,7 @@ form.sign-in-form {
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
-  height: 55px;
+  height: 40px;
   border-radius: 50px;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -113,7 +113,8 @@ form.sign-in-form {
 
 .input-field input::placeholder {
   color: #aaa;
-  font-weight: 500;
+  font-weight: 200;
+  align-items: center;
 }
 
 .social-text {
@@ -167,7 +168,8 @@ form.sign-in-form {
   /*background-color: #f98c39;*/
 }
 .input-field:hover{
-  background-color: #f0e6e1;
+  /*background-color: #f0e6e1;*/
+  background-color: #a6c7f5;
 }
 .panels-container {
   position: absolute;
