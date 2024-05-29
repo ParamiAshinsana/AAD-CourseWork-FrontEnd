@@ -258,8 +258,11 @@ function getAllSaleDetails() {
                                 <td class="purchaseDate">${saleService.purchaseDate}</td>
                                 <td class="paymentMethod">${saleService.paymentMethod}</td>
                                 <td class="addedPoints">${saleService.addedPoints}</td>
+<!--                                <td class="action">-->
+<!--                                    <button class="btn btn-primary" onclick="deleteSale()">Refund</button>-->
+<!--                                </td>-->
                                 <td class="action">
-                                    <button class="btn btn-primary" onclick="deleteSale()">Refund</button>
+                                    <button class="btn btn-primary" onclick="deleteSale('${saleService.orderNo}' , '${saleService.purchaseDate}')">Refund</button>
                                 </td>
                               </tr>`;
                 $("#sale-tbl-body").append(record);
@@ -290,25 +293,32 @@ function getAllSaleDetails() {
 //     })
 // }
 
-function deleteSale(){
-    let orderNo = $('#order_no').val();
 
-    $.ajax({
-        method:"DELETE",
-        url:"http://localhost:8080/api/v1/sales/deleteSales/"+orderNo,
-        async:true,
 
-        success: function (data){
-            alert("Deleted!!!")
-            getAllSaleDetails();
-        },
-        error: function (xhr, exception){
-            alert("Error!!!")
-        },
-
-    })
-
+function deleteSale(orderNo,purchaseDate) {
+    console.log("Refund clicked for order: " + orderNo + " Purchase Date is : "+ purchaseDate);
+    alert("Refund functionality not implemented yet for order: " + orderNo);
 }
+
+// function deleteSale(){
+//     let orderNo = $('#order_no').val();
+//
+//     $.ajax({
+//         method:"DELETE",
+//         url:"http://localhost:8080/api/v1/sales/deleteSales/"+orderNo,
+//         async:true,
+//
+//         success: function (data){
+//             alert("Deleted!!!")
+//             getAllSaleDetails();
+//         },
+//         error: function (xhr, exception){
+//             alert("Error!!!")
+//         },
+//
+//     })
+//
+// }
 
 
 
