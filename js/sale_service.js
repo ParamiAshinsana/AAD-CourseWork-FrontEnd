@@ -280,7 +280,7 @@ function deleteSale(){
 
     $.ajax({
         method:"DELETE",
-        url:"http://localhost:8080/api/v1/sales/deleteSales/"+suppCode,
+        url:"http://localhost:8080/api/v1/sales/deleteSales/"+orderNo,
         async:true,
 
         success: function (data){
