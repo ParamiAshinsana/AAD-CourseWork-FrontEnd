@@ -272,30 +272,61 @@ function getAllSaleDetails() {
 }
 
 
-function deleteSale(orderNo, purchaseDate) {
-    let today = new Date();
-    let purchaseDateObj = new Date(purchaseDate);
-    let timeDifference = today.getTime() - purchaseDateObj.getTime();
-    let dayDifference = timeDifference / (1000 * 3600 * 24); // Convert time difference from milliseconds to days
+// function deleteSale(orderNo, purchaseDate) {
+//     let today = new Date();
+//     let purchaseDateObj = new Date(purchaseDate);
+//     let timeDifference = today.getTime() - purchaseDateObj.getTime();
+//     let dayDifference = timeDifference / (1000 * 3600 * 24); // Convert time difference from milliseconds to days
+//
+//     if (dayDifference <= 3) {
+//         $.ajax({
+//             method: "DELETE",
+//             url: "http://localhost:8080/api/v1/sales/deleteSales/" + orderNo,
+//             async: true,
+//             success: function(data) {
+//                 alert("Sale deleted successfully!");
+//                 getAllSaleDetails();
+//             },
+//             error: function(xhr, exception) {
+//                 alert("Error deleting sale!");
+//                 console.log("Error deleting sale:", xhr, exception);
+//             }
+//         });
+//     } else {
+//         alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
+//     }
+// }
 
-    if (dayDifference <= 3) {
-        $.ajax({
-            method: "DELETE",
-            url: "http://localhost:8080/api/v1/sales/deleteSales/" + orderNo,
-            async: true,
-            success: function(data) {
-                alert("Sale deleted successfully!");
-                getAllSaleDetails();
-            },
-            error: function(xhr, exception) {
-                alert("Error deleting sale!");
-                console.log("Error deleting sale:", xhr, exception);
-            }
-        });
-    } else {
-        alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Function to handle refund
 // function refundSale(orderNo) {
