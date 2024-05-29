@@ -272,13 +272,53 @@ function getAllSaleDetails() {
 }
 
 
+function deleteSale(orderNo, purchaseDate) {
+    let today = new Date();
+    let purchaseDateObj = new Date(purchaseDate);
+    let timeDifference = today.getTime() - purchaseDateObj.getTime();
+    let dayDifference = timeDifference / (1000 * 3600 * 24); // Convert time difference from milliseconds to days
+
+    if (dayDifference <= 4.0) {
+        $.ajax({
+            method: "DELETE",
+            url: "http://localhost:8080/api/v1/sales/deleteSales/" + orderNo,
+            async: true,
+            success: function(data) {
+                alert("Sale deleted successfully!");
+                getAllSaleDetails();
+            },
+            error: function(xhr, exception) {
+                alert("Error deleting sale!");
+                console.log("Error deleting sale:", xhr, exception);
+            }
+        });
+    } else {
+        alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
+    }
+}
+
 // function deleteSale(orderNo, purchaseDate) {
-//     let today = new Date();
-//     let purchaseDateObj = new Date(purchaseDate);
-//     let timeDifference = today.getTime() - purchaseDateObj.getTime();
-//     let dayDifference = timeDifference / (1000 * 3600 * 24); // Convert time difference from milliseconds to days
+//     console.log("Received purchase date:", purchaseDate); // Debugging
 //
-//     if (dayDifference <= 3) {
+//     // Parse the purchase date correctly
+//     let purchaseDateObj = new Date(purchaseDate);
+//     if (isNaN(purchaseDateObj.getTime())) {
+//         // If parsing fails, try using a different format
+//         purchaseDateObj = new Date(purchaseDate.replace(/-/g, '/'));
+//     }
+//     console.log("Parsed purchase date:", purchaseDateObj); // Debugging
+//
+//     let today = new Date();
+//     console.log("Today's date:", today); // Debugging
+//
+//     // Calculate the time difference in milliseconds
+//     let timeDifference = today.getTime() - purchaseDateObj.getTime();
+//     // Convert time difference from milliseconds to days
+//     let dayDifference = timeDifference / (1000 * 3600 * 24);
+//
+//     console.log("Day difference:", dayDifference); // Debugging
+//
+//     if (dayDifference <= 4.0) {
 //         $.ajax({
 //             method: "DELETE",
 //             url: "http://localhost:8080/api/v1/sales/deleteSales/" + orderNo,
