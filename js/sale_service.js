@@ -1,5 +1,6 @@
 getAllCustomers();
 getAllItemCodes();
+getAllSaleDetails();
 
 // Get All Customer Codes
 function getAllCustomers() {
@@ -229,6 +230,7 @@ function saveSale() {
             alert("Sale saved successfully!");
             console.log("Saved");
             // Refresh the sales list or perform any other actions
+            getAllSaleDetails();
         },
         error: function (xhr, exception) {
             alert("Error saving sale!");
@@ -237,3 +239,87 @@ function saveSale() {
     });
 }
 
+
+// Get All Sales
+function getAllSaleDetails() {
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:8080/api/v1/sales/getAllSales",
+        async: true,
+        success: function(data) {
+            $("#sale-tbl-body").empty();
+            data.forEach(function (saleService) {
+                let record = `<tr>
+                                <td class="orderNo">${saleService.orderNo}</td>
+                                <td class="invDTO">${saleService.invDTO.itemCode}</td>
+                                <td class="cusDTO">${saleService.cusDTO.customerCode}</td>
+                                <td class="orderItemQty">${saleService.orderItemQty}</td>
+                                <td class="totalPrice">${saleService.totalPrice}</td>
+                                <td class="purchaseDate">${saleService.purchaseDate}</td>
+                                <td class="paymentMethod">${saleService.paymentMethod}</td>
+                                <td class="addedPoints">${saleService.addedPoints}</td>
+                                <td class="action">
+                                    <button class="btn btn-primary" onclick="refundSale('${saleService.orderNo}')">Refund</button>
+                                </td>
+                              </tr>`;
+                $("#sale-tbl-body").append(record);
+            });
+        }
+    });
+}
+
+// Function to handle refund
+function refundSale(orderNo) {
+    // Implement the refund functionality here
+    alert("Refund functionality not implemented yet for order: " + orderNo);
+}
+
+
+
+// Get All Sales
+// function getAllSaleDetails() {
+//     $.ajax({
+//         method:"GET",
+//         url:"http://localhost:8080/api/v1/sales/getAllSales",
+//         async:true,
+//         success: function(data) {
+//             $("#sale-tbl-body").empty();
+//             data.forEach(function (saleService) {
+//                 let record = `<tr><td class="orderNo">${saleService.orderNo}</td>
+//                                          <td class="invDTO">${saleService.invDTO.itemCode}</td>
+//                                          <td class="cusDTO">${saleService.cusDTO.customerCode}</td>
+//                                          <td class="orderItemQty">${saleService.orderItemQty}</td>
+//                                          <td class="totalPrice">${saleService.totalPrice}</td>
+//                                          <td class="purchaseDate">${saleService.purchaseDate}</td>
+//                                          <td class="paymentMethod">${saleService.paymentMethod}</td>
+//                                          <td class="addedPoints">${saleService.addedPoints}</td></tr>`;
+//                 $("#sale-tbl-body").append(record);
+//             });
+//         }
+//     });
+// }
+
+
+function getAllInventories() {
+    console.log("1232343Inventory")
+    $.ajax({
+        method:"GET",
+        url:"http://localhost:8080/api/v1/inventory/getAllInventory",
+        async:true,
+        success: function(data) {
+            $("#inventory-tbl-body").empty();
+            data.forEach(function(inventoryService) {
+                let record = `<tr><td class="itemCode">${inventoryService.itemCode}</td>
+                                         <td class="itemDescription">${inventoryService.itemDescription}</td>
+                                         <td class="category">${inventoryService.category}</td>
+                                         <td class="itemSize">${inventoryService.itemSize}</td>
+                                         <td class="itemQty">${inventoryService.itemQty}</td>
+                                         <td class="supplierEntity">${inventoryService.supplierEntity.supplierCode}</td>
+                                         <td class="unitPriceSale">${inventoryService.unitPriceSale}</td>
+                                         <td class="expectedProfit">${inventoryService.expectedProfit}</td>
+                                         <td class="profitMargin">${inventoryService.profitMargin}</td></tr>`;
+                $("#inventory-tbl-body").append(record);
+            });
+        }
+    });
+}
