@@ -272,6 +272,27 @@ function getAllSaleDetails() {
 function refundSale(orderNo) {
     // Implement the refund functionality here
     alert("Refund functionality not implemented yet for order: " + orderNo);
+    deleteSale();
+}
+
+function deleteSale(){
+    let orderNo = $('#order_no').val();
+
+    $.ajax({
+        method:"DELETE",
+        url:"http://localhost:8080/api/v1/sales/deleteSales/"+suppCode,
+        async:true,
+
+        success: function (data){
+            alert("Deleted!!!")
+            getAllSaleDetails();
+        },
+        error: function (xhr, exception){
+            alert("Error!!!")
+        },
+
+    })
+
 }
 
 
