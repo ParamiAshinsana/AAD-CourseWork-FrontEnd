@@ -295,10 +295,10 @@ function getAllSaleDetails() {
 
 
 
-function deleteSale(orderNo,purchaseDate) {
-    console.log("Refund clicked for order: " + orderNo + " Purchase Date is : "+ purchaseDate);
-    alert("Refund functionality not implemented yet for order: " + orderNo);
-}
+// function deleteSale(orderNo,purchaseDate) {
+//     console.log("Refund clicked for order: " + orderNo + " Purchase Date is : "+ purchaseDate);
+//     alert("Refund functionality not implemented yet for order: " + orderNo);
+// }
 
 // function deleteSale(){
 //     let orderNo = $('#order_no').val();
