@@ -259,7 +259,7 @@ function getAllSaleDetails() {
                                 <td class="paymentMethod">${saleService.paymentMethod}</td>
                                 <td class="addedPoints">${saleService.addedPoints}</td>
                                 <td class="action">
-                                    <button class="btn btn-primary" onclick="refundSale('${saleService.orderNo}')">Refund</button>
+                                    <button class="btn btn-primary" onclick="deleteSale()">Refund</button>
                                 </td>
                               </tr>`;
                 $("#sale-tbl-body").append(record);
@@ -269,11 +269,26 @@ function getAllSaleDetails() {
 }
 
 // Function to handle refund
-function refundSale(orderNo) {
-    // Implement the refund functionality here
-    alert("Refund functionality not implemented yet for order: " + orderNo);
-    deleteSale();
-}
+// function refundSale(orderNo) {
+//     // Implement the refund functionality here
+//     // alert("Refund functionality not implemented yet for order: " + orderNo);
+//     let orderNo = $('#order_no').val();
+//
+//     $.ajax({
+//         method:"DELETE",
+//         url:"http://localhost:8080/api/v1/sales/deleteSales/"+orderNo,
+//         async:true,
+//
+//         success: function (data){
+//             alert("Deleted!!!")
+//             getAllSaleDetails();
+//         },
+//         error: function (xhr, exception){
+//             alert("Error!!!")
+//         },
+//
+//     })
+// }
 
 function deleteSale(){
     let orderNo = $('#order_no').val();
