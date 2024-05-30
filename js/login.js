@@ -43,3 +43,41 @@ function saveUser() {
     },
   })
 }
+
+// *************************************************************************************
+// User Login
+
+function userLogin() {
+  let userLoginEmail = $('#login_username').val();
+  let userLoginPassword = $('#login_password').val();
+
+
+  $.ajax({
+    method: "POST",
+    contentType: "application/json",
+    url: "http://localhost:8080/api/v1/auth/authenticate",
+    async: true,
+    data: JSON.stringify({
+      "email": userLoginEmail,
+      "password": userLoginPassword
+    }),
+
+    success: function (data) {
+      alert("Saved!!!")
+      console.log("Saved!!!!")
+      console.log(data)
+      console.log(data.data.email)
+      console.log(data.data.token)
+
+
+      localStorage.setItem('user01',data.data.token)
+      // alert(localStorage.getItem('token'))
+      //window.location.href = '../index.html';
+    },
+
+
+    error: function (xhr, exception) {
+      alert("Error!!!")
+    },
+  })
+}
