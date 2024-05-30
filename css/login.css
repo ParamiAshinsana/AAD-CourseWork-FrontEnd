@@ -424,8 +424,86 @@ form.sign-in-form {
   display: block;
 }
 
+/*!*Login CSS*!*/
+/*.loginButton{*/
+/*  width: 150px;*/
+/*  background-color: #3480eb;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  height: 49px;*/
+/*  border-radius: 4px;*/
+/*  color: #fff;*/
+/*  text-transform: uppercase;*/
+/*  font-weight: 600;*/
+/*  margin: 10px 0;*/
+/*  cursor: pointer;*/
+/*  transition: 0.5s;*/
+/*}*/
+
+/*.loginButton:hover {*/
+/*  background-color: #527ab3;*/
+/*}*/
+
+/*.loginButton.transparent {*/
+/*  margin: 0;*/
+/*  background: none;*/
+/*  border: 2px solid #fff;*/
+/*  width: 130px;*/
+/*  height: 41px;*/
+/*  font-weight: 600;*/
+/*  font-size: 0.8rem;*/
+/*}*/
+
+/*.loginButton.transparent {*/
+/*  width: 110px;*/
+/*  height: 35px;*/
+/*  font-size: 0.7rem;*/
+/*}*/
+
+
+
+/*!*Register CSS*!*/
+/*.registerButton{*/
+/*  width: 150px;*/
+/*  background-color: #3480eb;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  height: 49px;*/
+/*  border-radius: 4px;*/
+/*  color: #fff;*/
+/*  text-transform: uppercase;*/
+/*  font-weight: 600;*/
+/*  margin: 10px 0;*/
+/*  cursor: pointer;*/
+/*  transition: 0.5s;*/
+/*}*/
+
+/*.registerButton:hover {*/
+/*  background-color: #527ab3;*/
+/*}*/
+
+/*.loginButton.transparent {*/
+/*  margin: 0;*/
+/*  background: none;*/
+/*  border: 2px solid #fff;*/
+/*  width: 130px;*/
+/*  height: 41px;*/
+/*  font-weight: 600;*/
+/*  font-size: 0.8rem;*/
+/*}*/
+
+/*.loginButton.transparent {*/
+/*  width: 110px;*/
+/*  height: 35px;*/
+/*  font-size: 0.7rem;*/
+/*}*/
+
+
+/************************************************/
+/************************************************/
+
 /*Login CSS*/
-.loginButton{
+#loginButton{
   width: 150px;
   background-color: #3480eb;
   border: none;
@@ -440,11 +518,11 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-.loginButton:hover {
+#loginButton:hover {
   background-color: #527ab3;
 }
 
-.loginButton.transparent {
+#loginButton.transparent {
   margin: 0;
   background: none;
   border: 2px solid #fff;
@@ -454,7 +532,7 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
-.loginButton.transparent {
+#loginButton.transparent {
   width: 110px;
   height: 35px;
   font-size: 0.7rem;
@@ -482,7 +560,7 @@ form.sign-in-form {
   background-color: #527ab3;
 }
 
-.loginButton.transparent {
+#loginButton.transparent {
   margin: 0;
   background: none;
   border: 2px solid #fff;
@@ -492,7 +570,7 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
-.loginButton.transparent {
+#loginButton.transparent {
   width: 110px;
   height: 35px;
   font-size: 0.7rem;
