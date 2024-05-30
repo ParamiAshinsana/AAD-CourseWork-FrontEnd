@@ -28,7 +28,7 @@
           <input type="password" id="login_password" placeholder="Password" />
         </div>
 <!--        <input type="submit" value="Sign In" class="btn solid" />-->
-        <button type="button" class="loginButton" onclick="userLogin()">Sign In</button>
+        <button type="button" id="loginButton" onclick="userLogin()">Sign In</button>
 <!--        <p class="social-text">Or Sign in with social platforms</p>-->
 <!--        <div class="social-media">-->
 <!--          <a href="#" class="social-icon">-->
@@ -126,6 +126,14 @@
     // Redirect to the dashboard
     window.location.href = "index.html";
   });
+
+
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   document.querySelector('.loginButton').addEventListener('click', function() {
+  //     // Redirect to the dashboard
+  //     window.location.href = "index.html";
+  //   });
+  // });
 </script>
 <!--<script>-->
 <!--  function login() {-->
