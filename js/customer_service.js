@@ -114,30 +114,101 @@ function deleteCustomer() {
 }
 
 
-// Get All Customers
+// // Get All Customers
+// function getAllCustomer() {
+//     $.ajax({
+//         method: "GET",
+//         url: "http://localhost:8080/api/v1/customers/getAllCustomer",
+//         async: true,
+//         success: function (data) {
+//             $("#customer-tbl-body").empty();
+//             data.forEach(function (customerService) {
+//                 let record = `<tr><td class="customerCode">${customerService.customerCode}</td>
+//                                          <td class="customerName">${customerService.customerName}</td>
+//                                          <td class="customerDOB">${customerService.customerDOB}</td>
+//                                          <td class="customerGender">${customerService.customerGender}</td>
+//                                          <td class="customerJoinDate">${customerService.customerJoinDate}</td>
+//                                          <td class="customerLoyaltyPoints">${customerService.customerLoyaltyPoints}</td>
+//                                          <td class="loyaltyLevel">${customerService.loyaltyLevel}</td>
+//                                          <td class="customerAddress">${customerService.customerAddress}</td>
+//                                          <td class="customerContact">${customerService.customerContact}</td>
+//                                          <td class="customerEmail">${customerService.customerEmail}</td></tr>`;
+//                 $("#customer-tbl-body").append(record);
+//             });
+//         }
+//     });
+// }
+
+
+
+
+// Get All Customers Function
 function getAllCustomer() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method: "GET",
         url: "http://localhost:8080/api/v1/customers/getAllCustomer",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (data) {
             $("#customer-tbl-body").empty();
             data.forEach(function (customerService) {
-                let record = `<tr><td class="customerCode">${customerService.customerCode}</td>
-                                         <td class="customerName">${customerService.customerName}</td>
-                                         <td class="customerDOB">${customerService.customerDOB}</td>
-                                         <td class="customerGender">${customerService.customerGender}</td>
-                                         <td class="customerJoinDate">${customerService.customerJoinDate}</td>
-                                         <td class="customerLoyaltyPoints">${customerService.customerLoyaltyPoints}</td>
-                                         <td class="loyaltyLevel">${customerService.loyaltyLevel}</td>
-                                         <td class="customerAddress">${customerService.customerAddress}</td>
-                                         <td class="customerContact">${customerService.customerContact}</td>
-                                         <td class="customerEmail">${customerService.customerEmail}</td></tr>`;
+                let record = `<tr>
+                                <td class="customerCode">${customerService.customerCode}</td>
+                                <td class="customerName">${customerService.customerName}</td>
+                                <td class="customerDOB">${customerService.customerDOB}</td>
+                                <td class="customerGender">${customerService.customerGender}</td>
+                                <td class="customerJoinDate">${customerService.customerJoinDate}</td>
+                                <td class="customerLoyaltyPoints">${customerService.customerLoyaltyPoints}</td>
+                                <td class="loyaltyLevel">${customerService.loyaltyLevel}</td>
+                                <td class="customerAddress">${customerService.customerAddress}</td>
+                                <td class="customerContact">${customerService.customerContact}</td>
+                                <td class="customerEmail">${customerService.customerEmail}</td>
+                              </tr>`;
                 $("#customer-tbl-body").append(record);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching customers!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
