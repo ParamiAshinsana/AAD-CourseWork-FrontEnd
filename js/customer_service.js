@@ -125,7 +125,7 @@ function updateCustomer() {
                 showConfirmButton: false,
                 timer: 2300
             });
-            console.log("Customer saved");
+            console.log("Customer updated");
             getAllCustomer();
         },
         error: function (xhr, exception) {
@@ -145,17 +145,42 @@ function updateCustomer() {
 function deleteCustomer() {
     let custCode = $('#customer_code').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method: "DELETE",
         url: "http://localhost:8080/api/v1/customers/deleteCustomer/" + custCode,
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
 
         success: function (data) {
-            alert("Deleted!!!")
+            Swal.fire({
+                icon: 'success',
+                title: 'Customer has been deleted successfully!',
+                showConfirmButton: false,
+                timer: 2300
+            });
+            console.log("Customer deleted");
             getAllCustomer();
         },
         error: function (xhr, exception) {
-            alert("Error!!!")
+            Swal.fire({
+                icon: 'error',
+                title: 'Error deleting customer!',
+                text: 'Please try again later.',
+            });
         },
 
     })
