@@ -121,14 +121,21 @@
 <script src="js/login.js"></script>
 <script src="lib/lib/jquery.min.js"></script>
 <script>
-  function login() {
-    // Your existing logic
-    window.location.href = "index.html";
+  document.getElementById('loginButton').addEventListener('click', function() {
 
-    // Return false to prevent the default form submission
-    return false;
-  }
+    // Redirect to the dashboard
+    window.location.href = "dashboard.html";
+  });
 </script>
+<!--<script>-->
+<!--  function login() {-->
+<!--    // Your existing logic-->
+<!--    window.location.href = "index.html";-->
+
+<!--    // Return false to prevent the default form submission-->
+<!--    return false;-->
+<!--  }-->
+<!--</script>-->
 
 </body>
 
