@@ -71,7 +71,7 @@ function userLogin() {
 
 
       localStorage.setItem('user01',data.data.token)
-      // alert(localStorage.getItem('token'))
+      alert(localStorage.getItem('user01'))
       //window.location.href = '../index.html';
     },
 
