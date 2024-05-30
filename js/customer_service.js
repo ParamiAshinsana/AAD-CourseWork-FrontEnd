@@ -55,7 +55,7 @@ function saveCustomer() {
                 icon: 'success',
                 title: 'Customer has been saved successfully!',
                 showConfirmButton: false,
-                timer: 2000
+                timer: 2300
             });
             console.log("Customer saved");
             getAllCustomer();
@@ -85,11 +85,26 @@ function updateCustomer() {
     let custContact = $('#customer_contact').val();
     let custEmail = $('#customer_email').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method: "PUT",
         contentType: "application/json",
         url: "http://localhost:8080/api/v1/customers/updateCustomer/" + custCode,
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         data: JSON.stringify({
             "customerCode": custCode,
             "customerName": custName,
@@ -104,11 +119,21 @@ function updateCustomer() {
         }),
 
         success: function (data) {
-            alert("Updated!!!")
+            Swal.fire({
+                icon: 'success',
+                title: 'Customer has been updated successfully!',
+                showConfirmButton: false,
+                timer: 2300
+            });
+            console.log("Customer saved");
             getAllCustomer();
         },
         error: function (xhr, exception) {
-            alert("Error!!!")
+            Swal.fire({
+                icon: 'error',
+                title: 'Error updating customer!',
+                text: 'Please try again later.',
+            });
         },
 
     })
