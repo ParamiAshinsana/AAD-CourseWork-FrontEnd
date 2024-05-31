@@ -4,6 +4,18 @@ getAllSaleDetails();
 
 // Get All Customer Codes
 function getAllCustomers() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/api/v1/customers/getAllCustomerCode",
