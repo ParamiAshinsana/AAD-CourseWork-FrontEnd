@@ -318,6 +318,19 @@ function getAllSaleDetails() {
 
 
 function deleteSale(orderNo, purchaseDate) {
+
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     let today = new Date();
     let purchaseDateObj = new Date(purchaseDate);
     let timeDifference = today.getTime() - purchaseDateObj.getTime();
@@ -328,19 +341,32 @@ function deleteSale(orderNo, purchaseDate) {
             method: "DELETE",
             url: "http://localhost:8080/api/v1/sales/deleteSales/" + orderNo,
             async: true,
-            success: function(data) {
-                alert("Sale deleted successfully!");
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Order has been Refunded successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("order refunded");
                 getAllSaleDetails();
             },
-            error: function(xhr, exception) {
-                alert("Error deleting sale!");
-                console.log("Error deleting sale:", xhr, exception);
-            }
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error Refunding Order!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     } else {
         alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
     }
 }
+
 
 // function deleteSale(orderNo, purchaseDate) {
 //     console.log("Received purchase date:", purchaseDate); // Debugging
