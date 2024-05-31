@@ -73,7 +73,7 @@ function getCustomerName(){
         error: function (xhr, exception) {
             Swal.fire({
                 icon: 'error',
-                title: 'Error fetching customers!',
+                title: 'Error fetching customer!',
                 text: 'Please try again later.',
             });
         },
@@ -152,6 +152,9 @@ function getItemDescription() {
         contentType:"application/json",
         url:"http://localhost:8080/api/v1/inventory/getInventoryDescription/"+inventoryCode,
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             console.log(data[0].itemDescription)
             // Populate the supplier name input field
@@ -159,8 +162,12 @@ function getItemDescription() {
             $('#item_price').val(data[0].unitPriceSale);
             $('#shoe_size').val(data[0].itemSize);
         },
-        error: function (xhr, exception){
-            alert(" description Error!!!")
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching Items Details!',
+                text: 'Please try again later.',
+            });
         },
     })
 }
@@ -319,7 +326,7 @@ function saveSale() {
         success: function (data) {
             Swal.fire({
                 icon: 'success',
-                title: 'Place Order has been saved successfully!',
+                title: 'Order has been Placed Successfully!',
                 showConfirmButton: false,
                 timer: 2150
             });
@@ -420,11 +427,28 @@ function deleteSale(orderNo, purchaseDate) {
                 'Authorization': 'Bearer ' + token
             },
             success: function (data) {
+                // Swal.fire({
+                //     icon: 'success',
+                //     title: 'Order has been Refunded successfully!',
+                //     showConfirmButton: false,
+                //     timer: 2150
+                // });
                 Swal.fire({
-                    icon: 'success',
-                    title: 'Order has been Refunded successfully!',
-                    showConfirmButton: false,
-                    timer: 2150
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, refund it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Refunded!",
+                            text: "Order has been Refunded successfully!",
+                            icon: "success"
+                        });
+                    }
                 });
                 console.log("order refunded");
                 getAllSaleDetails();
@@ -438,7 +462,15 @@ function deleteSale(orderNo, purchaseDate) {
             },
         });
     } else {
-        alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
+        // alert("Refund cannot be processed. The purchase date exceeds the 3-day limit.");
+        Swal.fire({
+            icon: 'error',
+            title: 'Refund Not Processed',
+            text: 'The purchase date exceeds the 3-day limit.',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+        });
+
     }
 }
 
