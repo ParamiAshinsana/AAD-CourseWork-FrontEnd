@@ -242,17 +242,25 @@ function saveSale() {
             "cashierName": cashierName
         }),
         success: function (data) {
-            alert("Sale saved successfully!");
-            console.log("Saved");
-            // Refresh the sales list or perform any other actions
+            Swal.fire({
+                icon: 'success',
+                title: 'Place Order has been saved successfully!',
+                showConfirmButton: false,
+                timer: 2150
+            });
+            console.log("Order saved");
             getAllSaleDetails();
         },
         error: function (xhr, exception) {
-            alert("Error saving sale!");
-            console.log("Error");
+            Swal.fire({
+                icon: 'error',
+                title: 'Error Placing Order!',
+                text: 'Please try again later.',
+            });
         },
     });
 }
+
 
 
 // Get All Sales
