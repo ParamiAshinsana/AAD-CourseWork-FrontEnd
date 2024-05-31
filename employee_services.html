@@ -30,6 +30,10 @@
         .app-header {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        .table-responsive {
+            max-height: 400px;
+            overflow: auto;
+        }
     </style>
 </head>
 <body>
@@ -420,34 +424,63 @@
                                     </div>
                                 </div>
 
+<!--                                <div class="row">-->
+<!--                                    <div class="col">-->
+
+<!--                                        <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">-->
+<!--                                            <thead>-->
+<!--                                            <tr>-->
+<!--                                                <th scope="col">Employee Code</th>-->
+<!--                                                <th scope="col">Employee Name</th>-->
+<!--                                                <th scope="col">DOB</th>-->
+<!--                                                <th scope="col">Gender</th>-->
+<!--                                                <th scope="col">Designation</th>-->
+<!--                                                <th scope="col">Access Role</th>-->
+<!--                                                <th scope="col">Join Date</th>-->
+<!--                                                <th scope="col">Attached Branch</th>-->
+<!--                                                <th scope="col">Address</th>-->
+<!--                                                <th scope="col">Contact</th>-->
+<!--                                                <th scope="col">Email</th>-->
+<!--                                                <th scope="col">Emergency Contact</th>-->
+<!--                                            </tr>-->
+<!--                                            </thead>-->
+<!--                                            <tbody id="employee-tbl-body">-->
+
+
+<!--                                            </tbody>-->
+<!--                                        </table>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+
                                 <div class="row">
                                     <div class="col">
-
-                                        <table class="table table-striped mt-3 col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">Employee Code</th>
-                                                <th scope="col">Employee Name</th>
-                                                <th scope="col">DOB</th>
-                                                <th scope="col">Gender</th>
-                                                <th scope="col">Designation</th>
-                                                <th scope="col">Access Role</th>
-                                                <th scope="col">Join Date</th>
-                                                <th scope="col">Attached Branch</th>
-                                                <th scope="col">Address</th>
-                                                <th scope="col">Contact</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">Emergency Contact</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody id="employee-tbl-body">
-
-
-                                            </tbody>
-                                        </table>
-
+                                        <div class="table-responsive" style="max-height: 400px; overflow: auto;">
+                                            <table class="table table-striped mt-3 col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12 table-bordered text-center">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Employee Code</th>
+                                                    <th scope="col">Employee Name</th>
+                                                    <th scope="col">DOB</th>
+                                                    <th scope="col">Gender</th>
+                                                    <th scope="col">Designation</th>
+                                                    <th scope="col">Access Role</th>
+                                                    <th scope="col">Join Date</th>
+                                                    <th scope="col">Attached Branch</th>
+                                                    <th scope="col">Address</th>
+                                                    <th scope="col">Contact</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Emergency Contact</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="employee-tbl-body">
+                                                <!-- Rows will be dynamically added here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
+
 
                             </div>
                         </div>
