@@ -46,6 +46,18 @@ function getAllCustomers() {
 function getCustomerName(){
     let cussCode = $('#custo_code').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         contentType:"application/json",
