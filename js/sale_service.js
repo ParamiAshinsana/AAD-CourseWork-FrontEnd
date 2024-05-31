@@ -20,13 +20,23 @@ function getAllCustomers() {
         method:"GET",
         url:"http://localhost:8080/api/v1/customers/getAllCustomerCode",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#custo_code").empty();
             data.forEach(function(customerCode) {
                 let option = `<option value="${customerCode}">${customerCode}</option>`;
                 $("#custo_code").append(option);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching customers!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
