@@ -89,14 +89,26 @@ $(document).ready(function() {
             processData: false,
             mimeType: "multipart/form-data",
             contentType: false,
-            success: function(response) {
-                alert("Saved!!!")
-                getAllInventories();
-                console.log('Image uploaded successfully.');
+            headers: {
+                'Authorization': 'Bearer ' + token
             },
-            error: function(xhr, status, error) {
-                console.error('Error uploading image:', error);
-            }
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Inventory has been saved successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("Inventory saved");
+                getAllCustomer();
+            },
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error saving inventory!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     });
 });
