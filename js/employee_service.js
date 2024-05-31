@@ -116,7 +116,7 @@ $(document).ready(function() {
                     icon: 'success',
                     title: 'Employee has been saved successfully!',
                     showConfirmButton: false,
-                    timer: 2300
+                    timer: 2150
                 });
                 console.log("Employee saved");
                 getAllEmployees();
@@ -195,20 +195,44 @@ $(document).ready(function() {
         formData.append('empGuardianNAme', empGuardianName);
         formData.append('empEmergencyContact', empEmergencyContact);
 
+        let token = localStorage.getItem('user01');
+
+        // Check if token is available
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
+            return;
+        }
+
         $.ajax({
             url: `http://localhost:8080/api/v1/employee/updateEmployee/${empCode}`,
             type: 'PUT',
             data: formData,
             processData: false,
             contentType: false,
-            success: function(response) {
-                alert("Employee updated successfully!");
-                console.log('Employee updated successfully.');
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Employee has been updated successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("Employee Updated");
                 getAllEmployees();
             },
-            error: function(xhr, status, error) {
-                console.error('Error updating employee:', error);
-            }
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error updating employee!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     });
 });
