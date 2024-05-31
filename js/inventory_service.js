@@ -163,6 +163,17 @@ $(document).ready(function() {
 
 
 function getAllInventories() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
     console.log("1232343Inventory")
     $.ajax({
         method:"GET",
