@@ -115,6 +115,9 @@ function saveSupplier(){
         contentType:"application/json",
         url:"http://localhost:8080/api/v1/suppliers/saveSupplier",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         data:JSON.stringify({
             "supplierCode":suppCode,
             "supplierName":suppName,
@@ -131,12 +134,22 @@ function saveSupplier(){
 
         }),
 
-        success: function (data){
-            alert("Saved!!!")
+        success: function (data) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Supplier has been saved successfully!',
+                showConfirmButton: false,
+                timer: 2150
+            });
+            console.log("Supplier saved");
             getAllSuppliers();
         },
-        error: function (xhr, exception){
-            alert("Error!!!")
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error saving supplier!',
+                text: 'Please try again later.',
+            });
         },
     })
 }
@@ -156,6 +169,8 @@ function updateSupplier(){
     let suppContact01 = $('#supp_contact-1').val();
     let suppContact02 = $('#supp_contact-2').val();
     let suppEmail = $('#supp_email').val();
+
+
 
     $.ajax({
         method:"PUT",
