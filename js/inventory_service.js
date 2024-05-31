@@ -5,10 +5,26 @@ var row_index = null;
 
 // Get All Supplier Codes
 function getAllSuppliers() {
+
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/api/v1/suppliers/getAllSupplierCode",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#supp_code").empty();
             data.forEach(function(supplierCode) {
@@ -24,11 +40,26 @@ function getAllSuppliers() {
 function getSupplierName(){
     let supplCode = $('#supp_code').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         contentType:"application/json",
         url:"http://localhost:8080/api/v1/suppliers/getSupplierName/"+supplCode,
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
             success: function(data) {
                 // Populate the supplier name input field
                 $('#supp_name').val(data);
