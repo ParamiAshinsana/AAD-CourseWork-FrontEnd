@@ -98,6 +98,18 @@ function saveSupplier(){
     let suppContact02 = $('#supp_contact-2').val();
     let suppEmail = $('#supp_email').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"POST",
         contentType:"application/json",
