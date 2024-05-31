@@ -63,12 +63,19 @@ function getCustomerName(){
         contentType:"application/json",
         url:"http://localhost:8080/api/v1/customers/getCustomerName/"+cussCode,
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             // Populate the supplier name input field
             $('#customer_name').val(data);
         },
-        error: function (xhr, exception){
-            alert("Error!!!")
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching customers!',
+                text: 'Please try again later.',
+            });
         },
     })
 }
@@ -84,6 +91,18 @@ function handleInventoryClick() {
 
 // Get All Item Codes
 function getAllItemCodes() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/api/v1/inventory/getAllItemCodes",
