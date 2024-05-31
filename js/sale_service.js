@@ -305,7 +305,14 @@ function getAllSaleDetails() {
                               </tr>`;
                 $("#sale-tbl-body").append(record);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching Place Order!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
