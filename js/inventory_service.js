@@ -184,6 +184,51 @@ $(document).ready(function() {
 });
 
 
+// Inventory Delete
+
+$(document).ready(function() {
+    $('#deleteButton').click(function() {
+        var i_code = $('#item_code').val();
+
+        let token = localStorage.getItem('user01');
+
+        // Check if token is available
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
+            return;
+        }
+
+        $.ajax({
+            url: "http://localhost:8080/api/v1/inventory/deleteInventory/" + i_code,
+            type: 'DELETE',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Inventory has been Deleted successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("Inventory deleted");
+                getAllEmployees();
+            },
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error deleting Inventory!',
+                    text: 'Please try again later.',
+                });
+            },
+        });
+    });
+});
+
 // Get All Inventories
 // function getAllInventories() {
 //     console.log("1232343Inventory")
