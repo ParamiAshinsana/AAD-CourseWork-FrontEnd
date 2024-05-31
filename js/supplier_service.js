@@ -4,10 +4,25 @@ var row_index = null;
 
 // Get All Suppliers
 function getAllSuppliers() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/api/v1/suppliers/getAllSupplier",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#supplier-tbl-body").empty();
             data.forEach(function (supplierService) {
@@ -25,7 +40,14 @@ function getAllSuppliers() {
             //                                          <td class="supplierAddress03">${supplierService.supplierAddress03}</td>
             //                                          <td class="supplierAddress04">${supplierService.supplierAddress04}</td>
             //                                          <td class="supplierAddress05">${supplierService.supplierAddress05}</td>
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching customers!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
