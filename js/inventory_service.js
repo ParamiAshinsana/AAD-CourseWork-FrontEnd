@@ -141,6 +141,18 @@ $(document).ready(function() {
         formData.append('iExpectedProfit', i_expectedProfit);
         formData.append('iProfitMargin', i_profitMargin);
 
+        let token = localStorage.getItem('user01');
+
+        // Check if token is available
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
+            return;
+        }
+
         $.ajax({
             url: `http://localhost:8080/api/v1/inventory/updateInventory/${i_code}`,
             type: 'PUT',
