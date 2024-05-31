@@ -170,13 +170,26 @@ function updateSupplier(){
     let suppContact02 = $('#supp_contact-2').val();
     let suppEmail = $('#supp_email').val();
 
+    let token = localStorage.getItem('user01');
 
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
 
     $.ajax({
         method:"PUT",
         contentType:"application/json",
         url:"http://localhost:8080/api/v1/suppliers/updateSupplier/"+suppCode,
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         data:JSON.stringify({
             "supplierCode":suppCode,
             "supplierName":suppName,
@@ -192,12 +205,22 @@ function updateSupplier(){
             "supplierEmail":suppEmail
         }),
 
-        success: function (data){
-            alert("Updated!!!")
+        success: function (data) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Supplier has been updated successfully!',
+                showConfirmButton: false,
+                timer: 2150
+            });
+            console.log("Supplier updated");
             getAllSuppliers();
         },
-        error: function (xhr, exception){
-            alert("Error!!!")
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error updating supplier!',
+                text: 'Please try again later.',
+            });
         },
 
     })
