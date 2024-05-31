@@ -107,13 +107,23 @@ function getAllItemCodes() {
         method:"GET",
         url:"http://localhost:8080/api/v1/inventory/getAllItemCodes",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#item_code").empty();
             data.forEach(function(itemCode) {
                 let option = `<option value="${itemCode}">${itemCode}</option>`;
                 $("#item_code").append(option);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching Items!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
