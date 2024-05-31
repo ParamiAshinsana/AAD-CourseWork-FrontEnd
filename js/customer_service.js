@@ -55,7 +55,7 @@ function saveCustomer() {
                 icon: 'success',
                 title: 'Customer has been saved successfully!',
                 showConfirmButton: false,
-                timer: 2300
+                timer: 2150
             });
             console.log("Customer saved");
             getAllCustomer();
@@ -123,7 +123,7 @@ function updateCustomer() {
                 icon: 'success',
                 title: 'Customer has been updated successfully!',
                 showConfirmButton: false,
-                timer: 2300
+                timer: 2150
             });
             console.log("Customer updated");
             getAllCustomer();
@@ -170,7 +170,7 @@ function deleteCustomer() {
                 icon: 'success',
                 title: 'Customer has been deleted successfully!',
                 showConfirmButton: false,
-                timer: 2300
+                timer: 2150
             });
             console.log("Customer deleted");
             getAllCustomer();
@@ -263,26 +263,6 @@ function getAllCustomer() {
         },
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Get All Customers

@@ -138,23 +138,41 @@ $(document).ready(function() {
     $('#deleteButton').click(function() {
         var emCode = $('#employee_code').val();
 
-        if (!emCode) {
-            alert("Please enter an employee code.");
+        let token = localStorage.getItem('user01');
+
+        // Check if token is available
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
             return;
         }
 
         $.ajax({
             url: "http://localhost:8080/api/v1/employee/deleteEmployee/" + emCode,
             type: 'DELETE',
-            success: function(response) {
-                alert("Deleted successfully!");
-                console.log('Employee deleted successfully.');
-                getAllEmployees(); // Assuming you have a function to refresh the employee list
+            headers: {
+                'Authorization': 'Bearer ' + token
             },
-            error: function(xhr, status, error) {
-                console.error('Error deleting employee:', error);
-                alert('Failed to delete employee.');
-            }
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Employee has been Deleted successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("Employee deleted");
+                getAllEmployees();
+            },
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error deleting employee!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     });
 });
