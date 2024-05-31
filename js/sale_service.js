@@ -206,11 +206,26 @@ function saveSale() {
     let paymentMethod = $('#payment_method').val();
     let cashierName = $('#cashier_name').val();
 
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method: "POST",
         contentType: "application/json",
         url: "http://localhost:8080/api/v1/sales/saveSale",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         data: JSON.stringify({
             "orderNo": orderNo,
             "cusDTO": {
