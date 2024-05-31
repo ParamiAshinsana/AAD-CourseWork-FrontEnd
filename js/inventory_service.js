@@ -100,7 +100,7 @@ $(document).ready(function() {
                     timer: 2150
                 });
                 console.log("Inventory saved");
-                getAllCustomer();
+                getAllInventories();
             },
             error: function (xhr, exception) {
                 Swal.fire({
@@ -159,14 +159,26 @@ $(document).ready(function() {
             data: formData,
             processData: false,
             contentType: false,
-            success: function(response) {
-                alert("Inventory updated successfully!");
-                console.log('Inventory updated successfully.');
-                getAllEmployees();
+            headers: {
+                'Authorization': 'Bearer ' + token
             },
-            error: function(xhr, status, error) {
-                console.error('Error updating Inventory :', error);
-            }
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Inventory has been Updated successfully!',
+                    showConfirmButton: false,
+                    timer: 2150
+                });
+                console.log("Inventory updated");
+                getAllInventories();
+            },
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error Updating inventory!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     });
 });
