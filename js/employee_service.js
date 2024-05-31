@@ -3,10 +3,25 @@ var row_index = null;
 
 // Get All Employees
 function getAllEmployees() {
+    let token = localStorage.getItem('user01');
+
+    // Check if token is available
+    if (!token) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Authentication Error',
+            text: 'User not authenticated. Please log in.',
+        });
+        return;
+    }
+
     $.ajax({
         method:"GET",
         url:"http://localhost:8080/api/v1/employee/getAllEmployee",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#employee-tbl-body").empty();
             data.forEach(function(employeeService) {
@@ -24,7 +39,14 @@ function getAllEmployees() {
                                          <td class="emergencyContact">${employeeService.emergencyContact}</td></tr>`;
                 $("#employee-tbl-body").append(record);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching employees!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
@@ -66,6 +88,18 @@ $(document).ready(function() {
         formData.append('empGuardianNAme', emGuardianName);
         formData.append('empEmergencyContact', emEmergencyContact);
 
+        let token = localStorage.getItem('user01');
+
+        // Check if token is available
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
+            return;
+        }
+
 
         $.ajax({
             url:"http://localhost:8080/api/v1/employee/saveEmployee",
@@ -74,14 +108,26 @@ $(document).ready(function() {
             processData: false,
             mimeType: "multipart/form-data",
             contentType: false,
-            success: function(response) {
-                alert("Saved!!!")
-                console.log('Image uploaded successfully.');
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Employee has been saved successfully!',
+                    showConfirmButton: false,
+                    timer: 2300
+                });
+                console.log("Employee saved");
                 getAllEmployees();
             },
-            error: function(xhr, status, error) {
-                console.error('Error uploading image:', error);
-            }
+            error: function (xhr, exception) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error saving employee!',
+                    text: 'Please try again later.',
+                });
+            },
         });
     });
 });
