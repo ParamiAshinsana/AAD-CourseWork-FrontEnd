@@ -179,6 +179,9 @@ function getAllInventories() {
         method:"GET",
         url:"http://localhost:8080/api/v1/inventory/getAllInventory",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function(data) {
             $("#inventory-tbl-body").empty();
             data.forEach(function(inventoryService) {
@@ -193,7 +196,14 @@ function getAllInventories() {
                                          <td class="profitMargin">${inventoryService.profitMargin}</td></tr>`;
                 $("#inventory-tbl-body").append(record);
             });
-        }
+        },
+        error: function (xhr, exception) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error fetching inventories!',
+                text: 'Please try again later.',
+            });
+        },
     });
 }
 
