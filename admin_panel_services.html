@@ -7,54 +7,51 @@
     <link rel="shortcut icon" type="image/png" href="img/HelloShoeLogo.png" />
     <link rel="stylesheet" href="assets/css/styles.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="../assets_own/css/navigation.css">
-    <link rel="stylesheet" href="css/profile_picure.css">
-<!--    <link rel="stylesheet" href="../lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">-->
+
+    <!--=============== LINKS ===============-->
+    <!--    <link rel="stylesheet" href="../lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <link rel="stylesheet" href="css/style_normalize.css">
+
+    <!--=============== CSS ===============-->
+
+    <!--=============== REMIX ICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
-    <link rel="shortcut icon" type="image/png" href="img/HelloShoeLogo.png" />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+
 
     <style>
-        a {
-            text-decoration: none;
-        }
-        #admin-services{
-            /*margin-top: 120px;*/
-            padding-top: 90px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .admin-container {
-            height: 200px; /* Set the desired height */
-            /*border: 1px solid #ccc; !* Add a border *!*/
-            margin-bottom: 20px; /* Add space between each div */
-
-           padding-left: 10px;
-           padding-right: 20px;
-            width: 50%;
-
-        }
         .app-header {
-            /*padding-bottom: 10px; !* Adjust the value as needed *!*/
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        .sale-items{
-           border: 1px solid #ccc;
-            width: 1000px;
-        }
         a {
             text-decoration: none;
+        }
+
+        .datepicker {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .datepicker input {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .datepicker-calendar {
+            display: none;
+        }
+        .datepicker-calendar.active {
+            display: block;
         }
     </style>
 </head>
@@ -86,7 +83,7 @@
                         <span class="hide-menu">Home</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="index.html" aria-expanded="false">
+                        <a class="sidebar-link" href="index.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -99,7 +96,7 @@
                         <span class="hide-menu">SERVICES</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="customer_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-user-group fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -107,7 +104,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="sale_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-comments-dollar fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -115,7 +112,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="supplier_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-people-group fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -123,7 +120,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="inventory.html" aria-expanded="false">
+                        <a class="sidebar-link" href="inventory.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-boxes-stacked fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -131,7 +128,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="employee_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-user-tie fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -139,13 +136,12 @@
                         </a>
                     </li>
 
-
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                         <span class="hide-menu">CONTROL SERVICES</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="admin_panel_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-user-gear fa-xl" style="color: #3480eb;"></i>
                 </span>
@@ -153,7 +149,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="user_services.html" aria-expanded="false">
+                        <a class="sidebar-link" href="user_services.html" aria-expanded="false" style="text-decoration: none;">
                 <span>
                   <i class="fa-solid fa-users-gear fa-xl" style="color: #1980eb;"></i>
                 </span>
@@ -210,146 +206,34 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Admin Panel Service Forms</h5>
+                        <h5 class="card-title fw-semibold mb-4">Admin Service Forms</h5>
                         <div class="card">
                             <div class="card-body">
 
                                 <div class="row">
-                                    <div class="admin-container" style="border: 1px solid #ccc;">
-                                        <div class="row">
-                                            <!-- First Form Column -->
-                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                                <form>
-                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                        <!--                        <label for="contact" class="form-label">Contact :</label>-->
-
-                                                        <div class="container mt-5">
-                                                            <label id="selected_sale_date" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
-                                                            <!--                            <h2>Select a Date:</h2>-->
-                                                            <button id="show-calendar-btn" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6">
+                                                <div class="datepicker-container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <select id="monthSelect" class="form-control"></select>
                                                         </div>
-
-                                                        <!-- Datepicker container -->
-                                                        <div id="datepicker-container" class="d-none">
-                                                            <div id="datepicker"></div>
+                                                        <div class="col">
+                                                            <select id="yearSelect" class="form-control"></select>
                                                         </div>
                                                     </div>
-                                                </form>
-                                            </div>
+                                                    <br>
+                                                    <input type="text" class="form-control" id="dateInput" placeholder="Select a date" readonly>
+                                                    <br>
+                                                    <label id="getDetails">Select the date and get sales details</label>
 
-
-                                            <!-- Second Form Column -->
-                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
-                                                <form>
-                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                        <label for="selected_date_sales" class="form-label" style="color: #9e8f80;">Total Sales of a Selected Date :</label>
-                                                        <input type="email" class="form-control" id="selected_date_sales" placeholder="Total Sales of a Selected Date">
+                                                    <div class="datepicker-calendar" id="calendar">
+                                                        <!-- Calendar will be generated here -->
                                                     </div>
-                                                </form>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="admin-container" style="border: 1px solid #ccc;">
-                                        <div class="row">
-                                            <!-- First Form Column -->
-                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                                <form>
-                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                        <!--                        <label for="contact" class="form-label">Contact :</label>-->
-
-                                                        <div class="container mt-5">
-                                                            <label id="selected_profit_date" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
-                                                            <!--                            <h2>Select a Date:</h2>-->
-                                                            <button id="show-calendar-btn-profit" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
-                                                        </div>
-
-                                                        <!-- Datepicker container -->
-                                                        <div id="datepicker-profit-container" class="d-none">
-                                                            <div id="datepicker-profit"></div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-
-                                            <!-- Second Form Column -->
-                                            <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
-                                                <form>
-                                                    <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                        <label for="selected_date_profits" class="form-label" style="color: #9e8f80;">Total Profits of a Selected Date :</label>
-                                                        <input type="email" class="form-control" id="selected_date_profits" placeholder="Total Profits of a Selected Date">
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="admin-container" style="width: 1000px;">
-                                        <div class="sale-items">
-                                            <div class="row">
-                                                <!-- First Form Column -->
-                                                <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                                    <form>
-                                                        <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                            <!--                        <label for="contact" class="form-label">Contact :</label>-->
-
-                                                            <div class="container mt-5">
-                                                                <label id="selected_date_sale_item" class="form-label" style="color: #9e8f80;">Selected Date :</label><br>
-                                                                <!--                            <h2>Select a Date:</h2>-->
-                                                                <button id="show-calendar-btn-sale-item" class="btn btn-primary"><i class="fa fa-calendar"></i> Show Calendar</button>
-                                                            </div>
-
-                                                            <!-- Datepicker container -->
-                                                            <div id="datepicker-sale-item-container" class="d-none">
-                                                                <div id="datepicker-sale-item"></div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
                                                 </div>
-
-
-                                                <!-- Second Form Column -->
-                                                <div class="col col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="margin-top: 40px;">
-                                                    <form>
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                                    <label for="ad_03" class="form-label">Address Line 03 :</label>
-                                                                    <input type="text" class="form-control" id="ad_03" placeholder="Included their main city">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="form-group mb-4">
-                                                                    <label for="profileImg" class="form-label">Item Picture :</label>
-                                                                    <div class="card imgholder">
-                                                                        <label for="profileImg" class="upload">
-                                                                            <input type="file" name="" id="profileImg" accept="image/*">
-                                                                            <i class="bi bi-plus-circle-dotted"></i>
-                                                                        </label>
-                                                                        <img id="previewImg" src="img/icons-upload.png" alt="" width="100" height="100" class="img">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="form-group mb-4"> <!-- Added mb-4 class for increased bottom margin -->
-                                                                    <label for="ad_05" class="form-label">Address Line 05 :</label>
-                                                                    <input type="text" class="form-control" id="ad_05" placeholder="Included their postal code">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -373,19 +257,142 @@
 <script src="assets/libs/simplebar/dist/simplebar.js"></script>
 <script src="assets/js/dashboard.js"></script>
 
-<!-- JavaScript -->
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- Include Bootstrap JS -->
+<!--<script src="../lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/customer_service.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<!-- Include Bootstrap Datepicker JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-<!-- Your custom JavaScript files -->
-<script src="../assets_own/js/home.js"></script>
-<script src="js/pop-up.js"></script>
-<script src="js/admin_panel.js"></script>
-<script src="js/profile_picture.js"></script>
+<!-- Include the Swal library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dateInput = document.getElementById('dateInput');
+        const calendar = document.getElementById('calendar');
+        const getDetailsLabel = document.getElementById('getDetails');
+
+        let token = localStorage.getItem('user01');
+
+        if (!token) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Authentication Error',
+                text: 'User not authenticated. Please log in.',
+            });
+            return;
+        }
+
+        dateInput.addEventListener('click', function () {
+            calendar.classList.toggle('active');
+        });
+
+        calendar.addEventListener('click', function (event) {
+            if (event.target.tagName === 'TD' && event.target.dataset.date) {
+                const selectedDate = event.target.dataset.date;
+
+                // AJAX request to fetch sales details
+                $.ajax({
+                    method: "GET",
+                    url: `http://localhost:8080/api/v1/sales/getBestSellingInventory/${selectedDate}`,
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
+                    success: function (data) {
+                        if (data && data.itemCode && data.description) {
+                            const itemCode = data.itemCode;
+                            const itemDescription = data.description;
+
+                            // Update the label with item code and description
+                            // getDetailsLabel.textContent = `Code - ${itemCode}, Description - ${itemDescription}`;
+                            getDetailsLabel.innerHTML = `The Most Sale Item Code - <span>${itemCode}</span><br>Description - <span>${itemDescription}</span>`;
+                        } else {
+                            getDetailsLabel.textContent = 'No sales on this date.';
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error fetching sales details:", error);
+                        getDetailsLabel.textContent = 'Error fetching sales details. Please try again later.';
+                    }
+                });
+            }
+        });
+
+        // Generate a simple calendar for the current month
+        const now = new Date();
+        let currentYear = now.getFullYear();
+        let currentMonth = now.getMonth();
+
+        function generateCalendar(year, month) {
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            let calendarHtml = '<table class="table"><tr>';
+            for (let i = 0; i < 7; i++) {
+                calendarHtml += `<th>${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][i]}</th>`;
+            }
+            calendarHtml += '</tr><tr>';
+
+            for (let i = 0; i < firstDay; i++) {
+                calendarHtml += '<td></td>';
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                if ((firstDay + day - 1) % 7 === 0) {
+                    calendarHtml += '</tr><tr>';
+                }
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                calendarHtml += `<td data-date="${dateStr}">${day}</td>`;
+            }
+
+            calendarHtml += '</tr></table>';
+            calendar.innerHTML = calendarHtml;
+        }
+
+        function populateMonthSelect() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            months.forEach((month, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = month;
+                monthSelect.appendChild(option);
+            });
+        }
+
+        function populateYearSelect() {
+            const currentYear = new Date().getFullYear();
+            for (let year = currentYear - 10; year <= currentYear + 10; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            }
+        }
+
+        populateMonthSelect();
+        populateYearSelect();
+        generateCalendar(currentYear, currentMonth);
+
+        monthSelect.addEventListener('change', function () {
+            currentMonth = parseInt(monthSelect.value);
+            generateCalendar(currentYear, currentMonth);
+        });
+
+        yearSelect.addEventListener('change', function () {
+            currentYear = parseInt(yearSelect.value);
+            generateCalendar(currentYear, currentMonth);
+        });
+    });
+</script>
 </body>
 </html>
