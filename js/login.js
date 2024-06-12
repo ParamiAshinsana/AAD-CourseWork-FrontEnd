@@ -35,11 +35,22 @@ function saveUser() {
 
     success: function (data) {
       alert("Saved!!!")
+      // Swal.fire({
+      //   icon: 'success',
+      //   title: 'User has been Registered successfully!',
+      //   showConfirmButton: false,
+      //   timer: 2100
+      // });
     },
 
 
     error: function (xhr, exception) {
       alert("Error!!!")
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Error Registering User!',
+      //   text: 'Please try again',
+      // });
     },
   })
 }
@@ -71,13 +82,19 @@ function userLogin() {
 
 
       localStorage.setItem('user01',data.data.token)
-      alert(localStorage.getItem('user01'))
-      //window.location.href = '../index.html';
+
+      // alert(localStorage.getItem('user01'))
+      window.location.href = '../../HelloShoes/index.html';
     },
 
 
     error: function (xhr, exception) {
       alert("Error!!!")
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Error Login User!',
+      //   text: 'Please try again',
+      // });
     },
   })
 }
