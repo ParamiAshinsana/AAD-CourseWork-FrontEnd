@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Shoes</title>
-    <link rel="shortcut icon" type="image/png" href="../assets_own/img/HelloShoeLogo.png" />
+    <link rel="shortcut icon" type="image/png" href="img/HelloShoeLogo.png" />
     <link rel="stylesheet" href="assets/css/styles.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
@@ -40,7 +40,7 @@
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <h2>Hello Shoes</h2>
                 <a href="index.html" class="text-nowrap logo-img">
-                    <img src="../assets_own/img/HelloShoeLogo.png" width="100px" alt="" />
+                    <img src="img/HelloShoeLogo.png" width="100px" alt="" />
                 </a>
                 <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                     <i class="ti ti-x fs-8"></i>
@@ -201,122 +201,12 @@
                                                 <table class="table col col-xxl-8 col-xl-8 col-lg-4 col-md-12 col-sm-12 col-12">
                                                     <thead class="table-active">
                                                     <tr>
-                                                        <th scope="col">User ID</th>
                                                         <th scope="col">User Email</th>
-                                                        <th scope="col">User Password</th>
+                                                        <th scope="col">User Name</th>
                                                         <th scope="col">Role</th>
                                                     </tr>
                                                     </thead>
-                                                    <tbody id="customer-tbl-body">
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe</td>
-                                                        <td>1234567890</td>
-                                                        <td>123 Main St</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Jane Smith</td>
-                                                        <td>9876543210</td>
-                                                        <td>456 Elm St</td>
-                                                    </tr>
-                                                    </tbody>
+                                                    <tbody id="user-tbl-body"></tbody>
                                                 </table>
                                             </div>
                                         </div>
@@ -335,6 +225,10 @@
     </div>
 </div>
 
+<script src="lib/lib/jquery.min.js"></script>
+<script src="js/user_service.js"></script>
+
+
 <script src="assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/sidebarmenu.js"></script>
@@ -343,14 +237,15 @@
 <script src="assets/libs/simplebar/dist/simplebar.js"></script>
 <script src="assets/js/dashboard.js"></script>
 
-<script src="../assets_own/lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
-
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <!-- Bootstrap Datepicker JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Include the Swal library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
 </body>
