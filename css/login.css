@@ -13,6 +13,21 @@ input {
   font-family: 'Poppins', sans-serif;
 }
 
+
+body {
+    background-image: url('../img/5576285.jpg'); /* Replace with the path to your background image */
+  background-size: cover; /* Ensure the background covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-attachment: fixed; /* Fix the background image so it doesn't scroll with the content */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .container {
   /*position: relative;*/
   display: flex;
@@ -165,6 +180,7 @@ form.sign-in-form {
 
 .btn:hover {
   background-color: #527ab3;
+  /*background-color: #527ab3;*/
   /*background-color: #f98c39;*/
 }
 .input-field:hover{
@@ -189,7 +205,8 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-95deg, #3480eb 0%, #788fb0 100%);
+  background-image: linear-gradient(-95deg, #3480eb 0%, #54c4f7 100%);
+  /*background-image: linear-gradient(-95deg, #3480eb 0%, #788fb0 100%);*/
   /*background-image: linear-gradient(-95deg, #fc670a 0%, #9e8f80 100%);*/
   transition: 1.8s ease-in-out;
   border-radius: 50%;
