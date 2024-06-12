@@ -1,3 +1,52 @@
+// sales details
+
+// function getSalesDetails() {
+//     let custCode = $('#customer_code').val();
+//
+//     let token = localStorage.getItem('user01');
+//
+//     // Check if token is available
+//     if (!token) {
+//         Swal.fire({
+//             icon: 'error',
+//             title: 'Authentication Error',
+//             text: 'User not authenticated. Please log in.',
+//         });
+//         return;
+//     }
+//
+//     $.ajax({
+//         method: "DELETE",
+//         url: "http://localhost:8080/api/v1/customers/deleteCustomer/" + custCode,
+//         async: true,
+//         headers: {
+//             'Authorization': 'Bearer ' + token
+//         },
+//
+//         success: function (data) {
+//             Swal.fire({
+//                 icon: 'success',
+//                 title: 'Customer has been deleted successfully!',
+//                 showConfirmButton: false,
+//                 timer: 2150
+//             });
+//             console.log("Customer deleted");
+//             getAllCustomer();
+//         },
+//         error: function (xhr, exception) {
+//             Swal.fire({
+//                 icon: 'error',
+//                 title: 'Error deleting customer!',
+//                 text: 'Please try again later.',
+//             });
+//         },
+//
+//     })
+// }
+
+
+
+
 // $(document).ready(function(){
 //     // Initialize Datepicker
 //     $("#datepicker").datepicker({
