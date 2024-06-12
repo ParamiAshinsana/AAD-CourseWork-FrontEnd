@@ -16,6 +16,95 @@
     a {
       text-decoration: none;
     }
+
+    .main_content {
+      position: relative;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1; /* Ensure the text is above the image */
+    }
+
+    .text-overlay h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+
+    .text-overlay p {
+      font-size: 1.5em;
+    }
+
+    .main_content img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+
+    .main-section .main_content .text-overlay h1{
+      font-size: 155px;
+      line-height: 90px;
+      font-family: "pyxidium quick";
+      background: linear-gradient(to right,#3480eb,#bbd6fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      bottom: -10px;
+      left: -5%;
+    }
+
+    .main-section .main_content .text-overlay h1 span{
+      font-size: 100px;
+      background: linear-gradient(to right,#3480eb,#bbd6fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .main-section .main_content .text-overlay p{
+      font-size: 35px;
+      line-height: 81px;
+      position: relative;
+      bottom: -100px;
+    }
+
+
+
+    .fly-in-text {
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .fly-in-text li{
+      display: inline-block;
+      margin-right: 30px;
+      font-weight: 300;
+      font-size: 4em;
+      color: #3480eb;
+      opacity: 1;
+      transition: all 2.5s ease;
+      font-family: 'Eater', cursive;
+    }
+    .fly-in-text li:last-child {
+      margin-right: 0;
+    }
+
+    .fly-in-text li.hiddeen:nth-child(1){ transform: translateX(-200px) translateY(-200px); }
+    .fly-in-text li.hiddeen:nth-child(2){ transform: translateX(20px) translateY(100px); }
+    .fly-in-text li.hiddeen:nth-child(3){ transform: translateX(-150px) translateY(-80px); }
+    .fly-in-text li.hiddeen:nth-child(4){ transform: translateX(10px) translateY(-200px); }
+    .fly-in-text li.hiddeen:nth-child(5){ transform: translateX(-300px) translateY(200px); }
+    .fly-in-text li.hiddeen:nth-child(6){ transform: translateX(20px) translateY(-20px); }
+    .fly-in-text li.hiddeen:nth-child(7){ transform: translateX(30px) translateY(200px); }
+
   </style>
 
 
@@ -196,6 +285,46 @@
 
       <div class="container-fluid">
         <!--  Row 1 -->
+
+
+
+
+        <div class="row">
+          <section id="home">
+            <section class="main-section">
+              <div class="main_content">
+
+                <ul class="fly-in-text">
+                  <li class="hiddeen">W</li>
+                  <li class="hiddeen">E</li>
+                  <li class="hiddeen">L</li>
+                  <li class="hiddeen">C</li>
+                  <li class="hiddeen">O</li>
+                  <li class="hiddeen">M</li>
+                  <li class="hiddeen">E</li>
+                </ul>
+
+
+
+                <div class="text-overlay">
+                  <h1>Hello<br><span>Shoes</span></h1>
+                  <p>Where every step begins a journey</p>
+                </div>
+                <img src="img/5576285.jpg" alt="" style="width: 1150px; height: 600px;">
+
+
+              </div>
+
+            </section>
+          </section>
+        </div>
+
+
+
+
+
+
+
         <div class="row">
 
           <div class="col-lg-8 d-flex align-items-strech">
@@ -478,91 +607,91 @@
 
 
 
-        <div class="row">
+<!--        <div class="row">-->
 
-            <div class="col-sm-6 col-xl-3">
-                          <div class="card overflow-hidden rounded-2">
-                            <div class="position-relative">
-                              <a href="javascript:void(0)"><img src="assets/images/products/s4.jpg" class="card-img-top rounded-0" alt="..."></a>
-                              <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
-                            </div>
-                            <div class="card-body pt-3 p-4">
-                              <h6 class="fw-semibold fs-4">Boat Headphone</h6>
-                              <div class="d-flex align-items-center justify-content-between">
-                                <h6 class="fw-semibold fs-4 mb-0">$50 <span class="ms-2 fw-normal text-muted fs-3"><del>$65</del></span></h6>
-                                <ul class="list-unstyled d-flex align-items-center mb-0">
-                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                                  <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="card overflow-hidden rounded-2">
-                <div class="position-relative">
-                  <a href="javascript:void(0)"><img src="assets/images/products/s5.jpg" class="card-img-top rounded-0" alt="..."></a>
-                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
-                <div class="card-body pt-3 p-4">
-                  <h6 class="fw-semibold fs-4">MacBook Air Pro</h6>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h6 class="fw-semibold fs-4 mb-0">$650 <span class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6>
-                    <ul class="list-unstyled d-flex align-items-center mb-0">
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="card overflow-hidden rounded-2">
-                <div class="position-relative">
-                  <a href="javascript:void(0)"><img src="assets/images/products/s7.jpg" class="card-img-top rounded-0" alt="..."></a>
-                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
-                <div class="card-body pt-3 p-4">
-                  <h6 class="fw-semibold fs-4">Red Valvet Dress</h6>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h6 class="fw-semibold fs-4 mb-0">$150 <span class="ms-2 fw-normal text-muted fs-3"><del>$200</del></span></h6>
-                    <ul class="list-unstyled d-flex align-items-center mb-0">
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="card overflow-hidden rounded-2">
-                <div class="position-relative">
-                  <a href="javascript:void(0)"><img src="assets/images/products/s11.jpg" class="card-img-top rounded-0" alt="..."></a>
-                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
-                <div class="card-body pt-3 p-4">
-                  <h6 class="fw-semibold fs-4">Cute Soft Teddybear</h6>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h6 class="fw-semibold fs-4 mb-0">$285 <span class="ms-2 fw-normal text-muted fs-3"><del>$345</del></span></h6>
-                    <ul class="list-unstyled d-flex align-items-center mb-0">
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-sm-6 col-xl-3">-->
+<!--                          <div class="card overflow-hidden rounded-2">-->
+<!--                            <div class="position-relative">-->
+<!--                              <a href="javascript:void(0)"><img src="assets/images/products/s4.jpg" class="card-img-top rounded-0" alt="..."></a>-->
+<!--                              <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>-->
+<!--                            </div>-->
+<!--                            <div class="card-body pt-3 p-4">-->
+<!--                              <h6 class="fw-semibold fs-4">Boat Headphone</h6>-->
+<!--                              <div class="d-flex align-items-center justify-content-between">-->
+<!--                                <h6 class="fw-semibold fs-4 mb-0">$50 <span class="ms-2 fw-normal text-muted fs-3"><del>$65</del></span></h6>-->
+<!--                                <ul class="list-unstyled d-flex align-items-center mb-0">-->
+<!--                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                                  <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                                  <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                                </ul>-->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--            </div>-->
+<!--            <div class="col-sm-6 col-xl-3">-->
+<!--              <div class="card overflow-hidden rounded-2">-->
+<!--                <div class="position-relative">-->
+<!--                  <a href="javascript:void(0)"><img src="assets/images/products/s5.jpg" class="card-img-top rounded-0" alt="..."></a>-->
+<!--                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>-->
+<!--                <div class="card-body pt-3 p-4">-->
+<!--                  <h6 class="fw-semibold fs-4">MacBook Air Pro</h6>-->
+<!--                  <div class="d-flex align-items-center justify-content-between">-->
+<!--                    <h6 class="fw-semibold fs-4 mb-0">$650 <span class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6>-->
+<!--                    <ul class="list-unstyled d-flex align-items-center mb-0">-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                    </ul>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-sm-6 col-xl-3">-->
+<!--              <div class="card overflow-hidden rounded-2">-->
+<!--                <div class="position-relative">-->
+<!--                  <a href="javascript:void(0)"><img src="assets/images/products/s7.jpg" class="card-img-top rounded-0" alt="..."></a>-->
+<!--                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>-->
+<!--                <div class="card-body pt-3 p-4">-->
+<!--                  <h6 class="fw-semibold fs-4">Red Valvet Dress</h6>-->
+<!--                  <div class="d-flex align-items-center justify-content-between">-->
+<!--                    <h6 class="fw-semibold fs-4 mb-0">$150 <span class="ms-2 fw-normal text-muted fs-3"><del>$200</del></span></h6>-->
+<!--                    <ul class="list-unstyled d-flex align-items-center mb-0">-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                    </ul>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-sm-6 col-xl-3">-->
+<!--              <div class="card overflow-hidden rounded-2">-->
+<!--                <div class="position-relative">-->
+<!--                  <a href="javascript:void(0)"><img src="assets/images/products/s11.jpg" class="card-img-top rounded-0" alt="..."></a>-->
+<!--                  <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>-->
+<!--                <div class="card-body pt-3 p-4">-->
+<!--                  <h6 class="fw-semibold fs-4">Cute Soft Teddybear</h6>-->
+<!--                  <div class="d-flex align-items-center justify-content-between">-->
+<!--                    <h6 class="fw-semibold fs-4 mb-0">$285 <span class="ms-2 fw-normal text-muted fs-3"><del>$345</del></span></h6>-->
+<!--                    <ul class="list-unstyled d-flex align-items-center mb-0">-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                      <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>-->
+<!--                    </ul>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-        </div>
+<!--        </div>-->
 
 
         <div class="row">
@@ -1702,7 +1831,8 @@
   </div>
 
 
-
+  <!-- Include the Swal library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -1712,6 +1842,17 @@
   <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="assets/js/dashboard.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      'use strict';
+
+      var texxt = $('ul li');
+      texxt.removeClass('hiddeen');
+
+    });
+  </script>
+
 </body>
 
 </html>
